@@ -60,7 +60,8 @@ function showEmail() {
 $(function () {
     var origin = location.hostname.toLowerCase();
     var warning = $(document.getElementsByClassName("warning")[0]);
-    if (origin.includes("dejaydev")) return;
+    if (origin.includes("dejaydev") || origin.includes("127.0.0.1")) return;
+    
     warning.html('It appears you\'ve stumbled upon: ' + origin + '!' +
     '<br> This page is a property owned by DeJay, and will redirect when it is prepared.')
 });
