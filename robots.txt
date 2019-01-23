@@ -1,0 +1,5 @@
+User-Agent: *
+Disallow: /jars
+Disallow: /modpack
+User-Agent: DuckDuckBot
+Disallow: *

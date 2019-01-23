@@ -1,0 +1,79 @@
+html,
+body {
+    background-color: #242424;
+    font: 20px 'Varela Round', 'Ubuntu', sans-serif;
+    color: white;
+    height: 100%;
+    margin: 0;
+}
+
+.announcement {
+    width: 100%;
+    height: 10vw;
+    position: relative;
+    margin-bottom:2vw;
+}
+
+.content {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-box-shadow: inset 0 0 5em rgba(0, 0, 0, .5);
+    box-shadow: inset 0 0 5em rgba(0, 0, 0, .5);
+}
+
+#blob {
+    margin-top: 50px;
+}
+
+.fa-2x {
+    height: 90px;
+    width: 90px;
+    font-size: 2em;
+    margin-left: 1.25vw;
+    margin-right: 1.25vw;
+    cursor: pointer;
+}
+
+.fa-discord:hover {
+    color: #7289DA;
+}
+
+.fa-twitter:hover {
+    color: #00aced;
+}
+
+.fa-blog:hover {
+    color: #00aced;
+}
+
+.fa-github:hover {
+    color: #4078c0;
+}
+
+.fa-at:hover {
+    color: #dd4b39;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: white;
+    text-decoration: none

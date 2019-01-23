@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/dejay
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://dejaydev.com
+  * I am dejay (https://keybase.io/dejay) on keybase.
+  * I have a public key ASC-6oYeA_yLYj9nVaM629vbI8CwMzmiMEFfS6ctH570Xwo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120beea861e03fc8b623f6755a33adbdbdb23c0b03339a230415f4ba72d1f9ef45f0a",
+      "host": "keybase.io",
+      "kid": "0120beea861e03fc8b623f6755a33adbdbdb23c0b03339a230415f4ba72d1f9ef45f0a",
+      "uid": "4b715b4d8c0e3a637d0538d0877c6419",
+      "username": "dejay"
+    },
+    "merkle_root": {
+      "ctime": 1547178723,
+      "hash": "1b72f1580b1d7331dde87a3edc496daa930de48ea0d3696d5d56b4bbbcefea856cc5b92b16f6fb84738205b18b3cf48ad66e9a87cbc28a5c2ca27793f2ca8ffc",
+      "hash_meta": "9b8dceaa2ccf4524f74eaecc56b1ba2663a3d0507cd89b777822db3f06f01999",
+      "seqno": 4332091
+    },
+    "service": {
+      "entropy": "10OgjKImx9ApKaCON3FEzUN6",
+      "hostname": "dejaydev.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "2.12.3"
+  },
+  "ctime": 1547178727,
+  "expire_in": 504576000,
+  "prev": "6eb28f9f8a01c1768285edf9c512c2f31791e273d36c7a5d37088af1197c8cd3",
+  "seqno": 72,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgvuqGHgP8i2I/Z1WjOtvb2yPAsDM5ojBBX0unLR+e9F8Kp3BheWxvYWTESpcCSMQgbrKPn4oBwXaChe35xRLC8xeR4nPTbHpdNwiK8Rl8jNPEIAG4GWRXt5fmTCdag6B3c4K+I+XYhAlqIshwUzpXas1jAgHCo3NpZ8RAzEM2iWz5xdpFP3kziZ78qw3xIwzNRzX1vfzCuH1jtgbfnBOChB/TsZ6U0Zirssq0MbP+CYXRdWKGivfZoVD9CKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEILXCGVQYQIekfe52CXCTfz0sg0WuGQ8IRkN+sfs7i9zYo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/dejay
+
+==================================================================
