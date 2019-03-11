@@ -34,8 +34,7 @@
     <link href="https://fonts.googleapis.com/css?family=Ubuntu|Varela+Round" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js" integrity="sha384-EIHISlAOj4zgYieurP0SdoiBYfGJKkgWedPHH4jCzpCXLmzVsw1ouK59MuUtP4a1"
-        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/index.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -51,19 +50,27 @@
 <body>
     <div class="content">
         <div class="warning"></div>
-        <img id="blob" src="img/blob.png" alt="Sorry!">
+        <img id="blob" src="img/blob.png" alt="Sorry!" height="120" width="120">
         <h1>Hello!</h1>
         <p>Wanna talk? Click one:
             <div>
-                <i class="fab fa-discord fa-2x" onclick="showDiscord()"></i>
-                <i class="fab fa-twitter fa-2x" onclick="showTwitter()"></i>
-                <i class="fas fa-book-open fa-2x" onclick="showBlog()"></i>
-                <i class="fab fa-github fa-2x" onclick="showGit()"></i>
-                <i class="fas fa-at fa-2x" onclick="showEmail()"></i>
+                <i class="fab fa-discord fa-2x" onmouseover="showText('DeJay#1337')"></i>
+                <a href="https://twitter.com/DeJayDev"> 
+                    <i class="fab fa-twitter fa-2x" 
+                    onmouseover="showText('@DeJayDev')" onmouseout="clearText()"></i></a>
+                <a href="https://blog.dejaydev.com"> 
+                    <i class="fas fa-book-open fa-2x" 
+                    onmouseover="showText('Click to visit my blog!')" onmouseout="clearText()"></i></a>
+                <a href="https://github.com/dejaydev">
+                    <i class="fab fa-github fa-2x" 
+                    onmouseover="showText('/DeJayDev')" onmouseout="clearText()"></i></a>
+                <a href="mailto:contact@dejaydev.com?subject=Hello!&body=%3C!--%20Say%20whatever%20you%20want%20%3A)%20--%3E">
+                    <i class="fas fa-at fa-2x" 
+                    onmouseover="showText('Or, send an email!')" onmouseout="clearText()"></i></a>
             </div>
             <div class="infoDiv"></div>
+        </p>
     </div>
-    </p>
     <script>
         document.getElementById('blob').draggable = false;
     </script>
