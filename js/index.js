@@ -42,12 +42,14 @@ $(function () {
     var origin = location.hostname.toLowerCase();
     var warning = $(document.getElementsByClassName("warning")[0]);
 
-    if (origin.includes("dejay") || origin.includes("127.0.0.1")) return;
+    if (origin.includes("dejay") || origin.includes("127.0.0.1") || origin.includes('localhost')) return;
 
     warning.html('It appears you\'ve stumbled upon: ' + origin + '!' +
         '<br> This page is a property owned by DeJay, and will redirect when it is prepared.')
 
     showText = function (text) {
-
+        infoDiv.animateCss("tada");
+        infoDiv.text(LocalText);
+        changeColor()
     }
 });
