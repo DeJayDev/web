@@ -47,7 +47,7 @@ $(function () {
     warning.html('It appears you\'ve stumbled upon: ' + origin + '!' +
         '<br> This page is a property owned by DeJay, and will redirect when it is prepared.')
 
-    showText = function (text) {
+    function showText(text) {
         infoDiv.animateCss("tada");
         infoDiv.text(text);
         changeColor()

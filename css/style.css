@@ -60,12 +60,12 @@ body {
     color: #00aced;
 }
 
-.fa-blog:hover {
-    color: #00aced;
+.fa-book-open:hover {
+    color: #FCC21B;
 }
 
 .fa-github:hover {
-    color: #4078c0;
+    color: #6e5494;
 }
 
 .fa-at:hover {
