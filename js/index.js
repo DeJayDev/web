@@ -49,7 +49,7 @@ $(function () {
 
     showText = function (text) {
         infoDiv.animateCss("tada");
-        infoDiv.text(LocalText);
+        infoDiv.text(text);
         changeColor()
     }
 });
