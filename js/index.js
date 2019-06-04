@@ -35,7 +35,7 @@ function showText(text) {
 
 function clearText() {
     var infoDiv = $('.infoDiv');
-    infoDiv.text('&nbsp;');
+    infoDiv.html('&nbsp;');
 }
 
 $(function () {
