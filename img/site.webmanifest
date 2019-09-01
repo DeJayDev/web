@@ -3,17 +3,17 @@
     "short_name": "DeJayDev",
     "icons": [
         {
-            "src": "/img/android-chrome-192x192.png?v=2",
+            "src": "/img/android-chrome-192x192.png?v=4",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/img/android-chrome-512x512.png?v=2",
+            "src": "/img/android-chrome-512x512.png?v=4",
             "sizes": "512x512",
             "type": "image/png"
         }
     ],
-    "theme_color": "#373737",
-    "background_color": "#373737",
+    "theme_color": "#9777c2",
+    "background_color": "#9777c2",
     "display": "standalone"
 }
