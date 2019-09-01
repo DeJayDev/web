@@ -1,5 +1,5 @@
 /* TEAM */
-Webmaster: DeJayDev
+Webmaster: DeJay
 Site: dejaydev.com //That's here!
 Twitter: @DeJayDev
 Location: IL, USA
