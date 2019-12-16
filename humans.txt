@@ -4,6 +4,11 @@ Site: dejaydev.com //That's here!
 Twitter: @DeJayDev
 Location: IL, USA
 
+Web designer: Xenons
+Site: Xenons.net
+Twitter: @xenons
+From: Serbia
+
 /* SITE */
-Last Update: 2019/08/31
+Last Update: 2019/12/16
 Software: GNU nano 2.0.6, VS Code
