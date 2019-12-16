@@ -62,12 +62,12 @@
             <h2>D<br>E<br>J<br>A<br>Y</h2>
         </div>
 
-        <div class="social">
-            <a href="" target="_blank"><img src="assets/sprites/discord.png" /></a>
-            <a href="" target="_blank"><img src="assets/sprites/twitter.png" /></a>
-            <a href="" target="_blank"><img src="assets/sprites/github.png" /></a>
-            <a href="" target="_blank"><img src="assets/sprites/book.png" /></a>
-            <a href="" target="_blank"><img src="assets/sprites/js.png" /></a>
+        <div class="social"></div>
+            <img id="discord" src="assets/sprites/discord.png" />
+            <a href="https://twitter.com/DeJayDev" target="_blank"><img id="twitter" src="assets/sprites/twitter.png" /></a>
+            <a href="https://github.com/DeJayDev" target="_blank"><img id="github" src="assets/sprites/github.png" /></a>
+            <a href="https://blog.dejay.dev" target="_blank"><img id="blog" src="assets/sprites/book.png" /></a>
+            <a href="https://jaystudios.dev" target="_blank"><img id="js" src="assets/sprites/js.png" /></a>
         </div>
     </header>
     <script>
@@ -88,6 +88,9 @@
     });
 
     $(function () {
+
+        $('#discord').click(e => {e.preventDefault(); alert("DeJay#1337"); return false; } );
+        
         var origin = location.hostname.toLowerCase();
         var warning = $(document.getElementsByClassName("warning")[0]);
 
