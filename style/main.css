@@ -1,0 +1,188 @@
+:root {
+    --c-white: #EFEFEF;
+    --c-purple: #9776C1;
+    --c-dpurple: #8B6BB4;
+}
+
+::selection {
+    background-color: transparent;
+    color: var(--c-blue);
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    color: var(--c-white);
+    background-color: var(--c-purple);
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background-color: var(--c-dpurple);
+    z-index: 2;
+}
+
+.circle1 {
+    top: -40vh;
+    height: 100vh;
+    width: 100vh;
+    right: -30vh;
+}
+
+.circle2 {
+    bottom: -20vh;
+    height: 70vh;
+    width: 70vh;
+    left: -10vh;
+}
+
+
+header .svg {
+    position: absolute;
+    top: 25%;
+    left: 22.5%;
+    width: 55%;
+    z-index: 4;
+}
+
+.textmain {
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    width: 80%;
+    z-index: 3;
+    cursor: default;
+}
+
+font {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    text-align: center;
+    font-size: 2vh;
+    z-index: 10;
+}
+
+h1 {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-size: 26vw;
+    color: var(--c-white);
+    opacity: 0.35;
+    text-align: center;
+    width: 100%;
+    display: block;
+    line-height: 22vw;
+}
+
+h2 {
+    display: none;
+}
+
+h3 {
+    display: block;
+    text-align: left;
+    font-size: 5vw;
+    color: var(--c-white);
+    margin: 0;
+    padding: 0;
+    position: relative;
+    padding-left: 2.8vw;
+}
+
+
+.social {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    width: 90%;
+    z-index: 8;
+    text-align: center;
+}
+
+.social a {
+    position: relative;
+    color: var(--c-white);
+    text-decoration: none;
+    cursor: pointer;
+    margin: 0 1vw;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+    border-radius: 50%;
+    padding: 1vw;
+}
+
+.social a img {
+    position: relative;
+    width: 4vh;
+}
+
+.social a:hover {
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+#discord:hover {
+    color: #7289DA;
+}
+
+#twitter:hover {
+    color: #00aced;
+}
+
+#blog:hover {
+    color: #FCC21B;
+}
+
+#github:hover {
+    color: #6e5494;
+}
+
+
+@media (max-width: 980px) {
+
+    h3,
+    h1 {
+        display: none;
+    }
+
+    .textmain {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    h2 {
+        display: block;
+        width: 100%;
+        height: 100%;
+        font-size: 20vh;
+        line-height: 20vh;
+        margin: 0;
+        padding: 0;
+        color: var(--c-white);
+        opacity: 0.35;
+        text-align: center;
+    }
+
+    header .svg {
+        top: 30%;
+        left: 5%;
+        width: 90%;
+    }
+}

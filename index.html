@@ -10,9 +10,10 @@
     <link rel="shortcut icon" href="/img/favicon.ico?v=4">
     <meta name="msapplication-TileColor" content="#9f00a7">
     <meta name="msapplication-config" content="/img/browserconfig.xml?v=4">
-    <meta name="theme-color" content="#9777c2">
+	<meta name='theme-color' content="#9776C1">
     <!-- COMMON TAGS -->
-    <meta charset="utf-8">
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>DeJay » Home</title>
     <!-- Search Engine -->
@@ -30,12 +31,13 @@
     <meta name="og:site_name" content="DeJay's Place">
     <meta name="og:locale" content="en_US">
     <meta name="og:type" content="website">
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu|Varela+Round" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="js/index.js"></script>
+    <meta name='author' content='Xenons' />
+    <link rel='stylesheet' href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
+	<link rel='shortcut icon' href='https://dejaydev.com/assets/logo.png'>
+	<link rel='icon' href='https://dejaydev.com/assets/logo.png'>
+
+	<link rel="stylesheet" href="style/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-92633060-1"></script>
     <script>
@@ -47,38 +49,57 @@
 </head>
 
 <body>
-    <div class="content">
-        <div class="warning"></div>
-        <img id="blob" src="img/blob.png" alt="Sorry!" height="120" width="120">
-        <h1>Hello!</h1>
-        <p>Wanna talk? Click one:
-            <div>
-                <i class="fab fa-discord fa-2x" 
-                    onmouseover="showText('DeJay#1337')"
-                    onmouseout="clearText()"></i>
-                    
-                <a href="https://twitter.com/DeJayDev"> 
-                    <i class="fab fa-twitter fa-2x" 
-                    onmouseover="showText('@DeJayDev')" onmouseout="clearText()"></i></a>
+    <header>
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+        <img class="svg" src="assets/sprite.svg" />
 
-                <a href="https://blog.dejaydev.com"> 
-                    <i class="fas fa-book-open fa-2x" 
-                    onmouseover="showText('Click to visit my blog!')" onmouseout="clearText()"></i></a>
+        <font class="warning"></font>
 
-                <a href="https://github.com/dejaydev">
-                    <i class="fab fa-github fa-2x" 
-                    onmouseover="showText('/DeJayDev')" onmouseout="clearText()"></i></a>
+        <div class="textmain">
+            <h3>HI, I'M</h3>
+            <h1>DEJAY</h1>
+            <h2>D<br>E<br>J<br>A<br>Y</h2>
+        </div>
 
-                <a href="mailto:contact@dejaydev.com?subject=Hello!&body=%3C!--%20Say%20whatever%20you%20want%20%3A)%20--%3E">
-                    <i class="fas fa-at fa-2x" 
-                    onmouseover="showText('Or, send an email!')" onmouseout="clearText()"></i></a>
-            </div>
-            <div class="infoDiv">&nbsp;</div>
-        </p>
-    </div>
+        <div class="social"></div>
+            <img id="discord" src="assets/sprites/discord.png" />
+            <a href="https://twitter.com/DeJayDev" target="_blank"><img id="twitter" src="assets/sprites/twitter.png" /></a>
+            <a href="https://github.com/DeJayDev" target="_blank"><img id="github" src="assets/sprites/github.png" /></a>
+            <a href="https://blog.dejay.dev" target="_blank"><img id="blog" src="assets/sprites/book.png" /></a>
+            <a href="https://jaystudios.dev" target="_blank"><img id="js" src="assets/sprites/js.png" /></a>
+        </div>
+    </header>
     <script>
-        document.getElementById('blob').draggable = false;
+    if ($(window).width() < 980) {$(".svg").attr("src", "assets/spritephone.svg");}
+    $(window).resize(function() {
+        if ($(window).width() < 980) {
+            curim = $(".svg").attr("src");
+            if (curim == "assets/sprite.svg") {
+                $(".svg").attr("src", "assets/spritephone.svg");
+            }
+        }
+        else {
+            curim = $(".svg").attr("src");
+            if (curim == "assets/spritephone.svg") {
+                $(".svg").attr("src", "assets/sprite.svg");
+            }
+        }
+    });
+
+    $(function () {
+
+        $('#discord').click(e => {e.preventDefault(); alert("DeJay#1337"); return false; } );
+        
+        var origin = location.hostname.toLowerCase();
+        var warning = $(document.getElementsByClassName("warning")[0]);
+
+        if (origin.includes("dejay") || origin.includes("127.0.0.1") || origin.includes('localhost')) return;
+
+        warning.html('It appears you\'ve stumbled upon: ' + origin + '!' +
+            '<br> This page is a property owned by DeJay, and will redirect when it is prepared.')
+
+    });
     </script>
 </body>
-
 </html>
