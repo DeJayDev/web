@@ -89,16 +89,22 @@
 
         $(function () {
             $('#discord').click(e => { e.preventDefault(); alert("DeJay#1337"); return false; });
-            var origin = location.hostname.toLowerCase();
+            var origin = location.hostname;
             var warning = $(".warning");
             var flags = new URLSearchParams(window.location.search)
             if(flags.has('trans')) {
+                $(".circle").remove()
                 $(".textmain").html(
                     "<h3>HI, I'M</h3> <h1>TRANS</h1> <h2>T<br>R<br>A<br>N<br>S</h2>"
                 )
+                $("body")
+                    .css({
+                        background: "linear-gradient(#4FA5C2 0%, #4FA5C2 20%, #F587AC 20%, #F587AC 40%, #F9FBFC 40%, #F9FBFC 60%, #F587AC 60%, #F587AC 80%, #4FA5C2 80%, #4FA5C2 100%",
+                        color: "black"
+                    })
             }
 
-            if (origin.includes("dejay") || origin.includes("127.0.0.1") || origin.includes('localhost')) {
+            if (!origin.includes("dejay")) {
                 warning.html('It appears you\'ve stumbled upon: ' + origin + '!' +
                     '<br> This page is a property owned by DeJay, and will redirect when it is prepared.')
             }
