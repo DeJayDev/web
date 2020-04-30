@@ -1,6 +1,6 @@
 /* TEAM */
 Webmaster: DeJay
-Site: dejaydev.com //That's here!
+Site: dejay.dev //That's here!
 Twitter: @DeJayDev
 Location: IL, USA
 
@@ -10,5 +10,5 @@ Twitter: @xenons
 From: Serbia
 
 /* SITE */
-Last Update: 2020/3/18
+Last Update: 2020/4/29
 Software: GNU nano 2.0.6, VS Code

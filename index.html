@@ -38,14 +38,17 @@
     <link rel='icon' href='https://dejaydev.com/assets/logo.png'>
 
     <link rel="stylesheet" href="style/main.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-92633060-1"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+    <!-- Google Analytics -->
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-92633060-1');
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+    ga('create', 'UA-92633060-1', 'auto');
+    ga('send', 'pageview');
     </script>
 </head>
 
@@ -73,55 +76,19 @@
             <a href="https://jaystudios.dev" target="_blank"><img id="js" src="assets/sprites/js.png" /></a>
         </div>
     </header>
+
     <script>
         if ($(window).width() < 980) {
-            curim = $(".svg").attr("src");
-            if (curim == "assets/sprite.svg") {
+            svg = $(".svg").attr("src");
+            if (svg == "assets/sprite.svg") {
                 $(".svg").attr("src", "assets/spritephone.svg");
             }
-        }
-        else {
-            curim = $(".svg").attr("src");
-            if (curim == "assets/spritephone.svg") {
+        } else {
+            svg = $(".svg").attr("src");
+            if (svg == "assets/spritephone.svg") {
                 $(".svg").attr("src", "assets/sprite.svg");
             }
         }
-
-        $(function () {
-            var origin = location.hostname;
-            var warning = $(".warning");
-            var flags = new URLSearchParams(window.location.search)
-            if(flags.has('trans')) {
-                $(".circle").remove()
-                $(".textmain").html(
-                    "<h3>HI, I'M</h3> <h1>TRANS</h1> <h2>T<br>R<br>A<br>N<br>S</h2>"
-                )
-                $("body")
-                    .css({
-                        background: "linear-gradient(#4FA5C2 0%, #4FA5C2 20%, #F587AC 20%, #F587AC 40%, #F9FBFC 40%, #F9FBFC 60%, #F587AC 60%, #F587AC 80%, #4FA5C2 80%, #4FA5C2 100%",
-                        color: "black"
-                    })
-            } else if(flags.keys().next().value) {
-                var flag = flags.keys().next().value;
-                if(flag.length > 5) {
-                    console.log('Easter Egg failed. Cannot be more than 5 characters long');
-                    return;
-                };
-                var msg;
-                var tmp = flag.split('').forEach(char => {
-                    msg = char + '<br>'
-                })
-                $(".textmain").html(
-                    `<h3>HI, I'M</h3> <h1>${flag.toUpperCase()}</h1> <h2>${msg}</h2>`
-                )
-            }
-
-            if (!origin.includes("dejay")) {
-                warning.html('It appears you\'ve stumbled upon: ' + origin + '!' +
-                    '<br> This page is a property owned by DeJay, and will redirect when it is prepared.')
-            }
-        });
-
     </script>
 </body>
 
