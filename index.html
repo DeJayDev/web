@@ -101,6 +101,19 @@
                         background: "linear-gradient(#4FA5C2 0%, #4FA5C2 20%, #F587AC 20%, #F587AC 40%, #F9FBFC 40%, #F9FBFC 60%, #F587AC 60%, #F587AC 80%, #4FA5C2 80%, #4FA5C2 100%",
                         color: "black"
                     })
+            } else if(flags.keys().next().value) {
+                var flag = flags.keys().next().value;
+                if(flag.length > 5) {
+                    console.log('Easter Egg failed. Cannot be more than 5 characters long');
+                    return;
+                };
+                var msg;
+                var tmp = flag.split('').forEach(char => {
+                    msg = char + '<br>'
+                })
+                $(".textmain").html(
+                    `<h3>HI, I'M</h3> <h1>${flag.toUpperCase()}</h1> <h2>${msg}</h2>`
+                )
             }
 
             if (!origin.includes("dejay")) {
