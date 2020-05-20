@@ -39,9 +39,9 @@ $(function () {
                 })
         }
         
-        var msg;
+        var msg = '';
         flag.split('').forEach(char => {
-            msg = char + '<br>'
+            msg += char + '<br>'
         })
 
         $(".textmain").html(
