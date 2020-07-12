@@ -37,8 +37,7 @@
     <link rel='shortcut icon' href='https://dejaydev.com/assets/logo.png'>
     <link rel='icon' href='https://dejaydev.com/assets/logo.png'>
     <link rel="stylesheet" href="style/main.css">
-    <script async src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script async src="js/index.js"></script>
+    <script src="js/index.js"></script>
     <!-- Google Analytics -->
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -80,15 +79,14 @@
     </header>
 
     <script>
-        if ($(window).width() < 980) {
-            svg = $(".svg").attr("src");
-            if (svg == "assets/sprites/sprite.svg") {
-                $(".svg").attr("src", "assets/sprites/spritephone.svg");
+        svg = document.querySelector('.svg')
+        if (window.innerWidth < 980) {
+            if (svg.getAttribute('src') == 'assets/sprites/sprite.svg') {
+                svg.setAttribute('src', 'assets/sprites/spritephone.svg')
             }
         } else {
-            svg = $(".svg").attr("src");
-            if (svg == "assets/sprites/spritephone.svg") {
-                $(".svg").attr("src", "assets/sprites/sprite.svg");
+            if (svg.getAttribute('src') == 'assets/sprites/spritephone.svg') {
+                svg.setAttribute('src', 'assets/sprites/sprite.svg')
             }
         }
     </script>
