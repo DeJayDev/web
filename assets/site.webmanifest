@@ -1,6 +1,6 @@
 {
-    "name": "DeJayDev",
-    "short_name": "DeJayDev",
+    "name": "",
+    "short_name": "",
     "icons": [
         {
             "src": "/assets/android-chrome-192x192.png?v=4",
@@ -8,12 +8,11 @@
             "type": "image/png"
         },
         {
-            "src": "/assets/android-chrome-512x512.png?v=4",
-            "sizes": "512x512",
+            "src": "/assets/android-chrome-384x384.png?v=4",
+            "sizes": "384x384",
             "type": "image/png"
         }
     ],
     "theme_color": "#9777c2",
-    "background_color": "#9777c2",
-    "display": "standalone"
+    "background_color": "#9777c2"
 }
