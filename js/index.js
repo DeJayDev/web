@@ -13,21 +13,21 @@ document.addEventListener("DOMContentLoaded", function() {
         };
 
         if(flag == "trans") {
-            document.querySelectorAll(".circle").remove()
+            document.querySelectorAll(".circle").forEach(circle => circle.remove())
             var body = document.querySelector("body")
             body.style.background = "linear-gradient(#4FA5C2 0%, #4FA5C2 20%, #F587AC 20%, #F587AC 40%, #F9FBFC 40%, #F9FBFC 60%, #F587AC 60%, #F587AC 80%, #4FA5C2 80%, #4FA5C2 100%"
             body.style.color = "black"
         }
 
         if(flag == "enby" || flag == "nb") {
-            document.querySelectorAll(".circle").remove()
+            document.querySelectorAll(".circle").forEach(circle => circle.remove())
             var body = document.querySelector("body")
             body.style.background = "linear-gradient(black 0%, black 20%, #FFF433 20%, #FFF433 40%, white 40%, white 60%, #9B59D0 60%, #9B59D0 80%, black 80%, black 100%"
             body.style.color = "#FF4D4D"
         }
 
         if(flag == "bi" || flag == "gay" /* Someone's gonna try it. */) {
-            document.querySelectorAll(".circle").remove()
+            document.querySelectorAll(".circle").forEach(circle => circle.remove())
             var body = document.querySelector("body")
             body.style.background = "linear-gradient(#C1357E 0%, #C1357E 40%, #675997 40%, #675997 60%, #0655A9 60%, #0655A9 100%"
             body.style.color = "white"
