@@ -40,8 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         document.querySelector(".textmain").innerHTML = `<h3>HI, I'M</h3> <h1>${flag.toUpperCase()}</h1> <h2>${msg}</h2>`
     }
-
-    if (!origin.includes("dejay")) {
+    if (!/(dejay)|(127.0.0.1)/.test(origin)) {
         warning.innerHTML = 'It appears you\'ve stumbled upon: ' + origin + '!' +
             '<br> This page is a property owned by DeJay, and will redirect when it is prepared.'
     }

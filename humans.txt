@@ -2,7 +2,7 @@
 Webmaster: DeJay
 Site: dejay.dev //That's here!
 Twitter: @DeJayDev
-Location: IL, USA
+Location: TX, USA
 
 Web designer: Xenons
 Site: Xenons.net
@@ -10,5 +10,5 @@ Twitter: @xenons
 From: Serbia
 
 /* SITE */
-Last Update: 2020/4/29
+Last Update: https://github.com/DeJayDev/web
 Software: GNU nano 2.0.6, VS Code
