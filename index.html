@@ -79,13 +79,7 @@
     <script>
         svg = document.querySelector('.svg')
         if (window.innerWidth < 980) {
-            if (svg.getAttribute('src') == 'assets/sprites/sprite.svg') {
-                svg.setAttribute('src', 'assets/sprites/spritephone.svg')
-            }
-        } else {
-            if (svg.getAttribute('src') == 'assets/sprites/spritephone.svg') {
-                svg.setAttribute('src', 'assets/sprites/sprite.svg')
-            }
+            svg.setAttribute('src', 'assets/sprites/spritephone.svg')
         }
     </script>
 </body>
