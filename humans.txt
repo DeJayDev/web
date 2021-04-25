@@ -11,4 +11,4 @@ From: Serbia
 
 /* SITE */
 Last Update: https://github.com/DeJayDev/web
-Software: GNU nano 2.0.6, VS Code
+Software: GNU nano 5.6.1, VS Code
