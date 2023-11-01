@@ -6,6 +6,5 @@ import cloudflare from "@astrojs/cloudflare";
 // https://astro.build/config
 export default defineConfig({
   integrations: [svelte()],
-  output: "static",
-  adapter: cloudflare()
+  output: "static"
 });
