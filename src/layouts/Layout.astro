@@ -22,30 +22,31 @@ const { title } = Astro.props;
 </html>
 <style is:global>
 	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
+    	--c-white: #EFEFEF;
+    	--c-purple: #9777C2;
+    	--c-dpurple: #8a65ba;
 	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
+
+	::-webkit-scrollbar {
+	    width: 12px;
+	    height: 12px;
+	}
+
+	::selection, ::-webkit-scrollbar-corner, ::-webkit-scrollbar-track {
+	    background-color: transparent;
+	}
+
+	::-webkit-scrollbar-thumb {
+	    background-color: var(--c-dpurple);
+	}
+	
+	html, 
+	body {
+		font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+		color: var(--c-white);
+    	background-color: var(--c-purple);
 		background-size: 224px;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
+		scrollbar-color: var(--c-dpurple) black;
+    	scrollbar-width: thin;
 	}
 </style>
