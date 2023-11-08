@@ -11,10 +11,14 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.3.0",
-    "@astrojs/cloudflare": "^7.6.3",
     "@astrojs/svelte": "^4.0.3",
+    "@heroicons/react": "^2.0.18",
     "astro": "^3.4.2",
+    "react-icons": "^4.11.0",
     "svelte": "^4.2.2",
     "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "@iconify/svelte": "^3.1.4"
   }
 }

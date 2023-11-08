@@ -1,0 +1,49 @@
+---
+import Icon from '@iconify/svelte';
+---
+<div class="warning">
+    <noscript>
+        Howdy! This website was made with you in mind. Feel free to keep JS disabled. <br>
+        You'll just have to scroll to the bottom without help :)
+    </noscript>
+</div>
+
+<div class="content">
+    <img class="topsvg" src="/sprite.svg" />
+    <h1>
+        Hi! I'm Dj
+        <span class="subtitle">I make dreams come true </span>
+    </h1>
+
+    <h2>Let's get to know each other </h2>
+
+    <!-- @ts-ignore: astro moment -->
+    <Icon icon="heroicons:chevron-double-down-20-solid" client:load />
+</div>
+
+<style>
+    .content {
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex: 50%;
+    }
+
+    .subtitle {
+        display: block;    
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 50px;
+        margin: 0;
+        padding: 0;
+        padding-top: 50px;
+    }
+
+    h2 {
+        font-weight: 100;
+    }
+</style>
