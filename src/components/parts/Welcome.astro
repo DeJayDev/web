@@ -1,6 +1,9 @@
 ---
-import Icon from '@iconify/svelte';
+
 ---
+
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"/>
+
 <div class="warning">
     <noscript>
         Howdy! This website was made with you in mind. Feel free to keep JS disabled. <br>
@@ -17,9 +20,20 @@ import Icon from '@iconify/svelte';
 
     <h2>Let's get to know each other </h2>
 
-    <!-- @ts-ignore: astro moment -->
-    <Icon icon="heroicons:chevron-double-down-20-solid" client:load />
+    <iconify-icon
+        icon="heroicons:chevron-double-down-20-solid" 
+        width="50" 
+        height="50"/>
 </div>
+
+<script>
+    const scrolltrigger = document.querySelector("iconify-icon")
+    const scrolldest    = document.querySelector(".about")
+
+    scrolltrigger?.addEventListener('click', () => {
+        scrollTo({top: scrolldest.scrollHeight, behavior: 'smooth'})
+    })
+</script>
 
 <style>
     .content {
@@ -33,6 +47,11 @@ import Icon from '@iconify/svelte';
 
     .subtitle {
         display: block;    
+    }
+
+    iconify-icon {
+        cursor: pointer;
+        margin: 10px;
     }
 
     h1 {

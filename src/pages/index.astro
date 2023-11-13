@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import FullPageView from '../components/FullPageView.astro';
 import Welcome from '../components/parts/Welcome.astro';
-
+import About from '../components/parts/About.astro';
 ---
 
 <Layout title="single homepage">
@@ -10,11 +10,11 @@ import Welcome from '../components/parts/Welcome.astro';
 		<Welcome/>
 	</FullPageView>
 	
-	<FullPageView>
-		<h1>This is the second full-height page section.</h1>
+	<FullPageView class="about">
+		<About/>
 	</FullPageView>
 	
 	<FullPageView>
-		<h1>This is the third full-height page section.</h1>
+		<h1>???</h1>
 	</FullPageView>	  
 </Layout>

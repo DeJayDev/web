@@ -1,23 +1,17 @@
 ---
-// interface Props {
-// 	title: string;
-// 	body: string;
-// 	href: string;
-// }
+interface Props {
+	class?: string;
+}
 
-import { ViewTransitions } from "astro:transitions";
-
-// const { href, title, body } = Astro.props;
+const { class: classname } = Astro.props;
 ---
 
-<ViewTransitions/>
-	<section class="full-page-view">
-	  <slot />
-	</section>
-</Transition>
+<section id="full-page-view" class={classname}>
+	<slot />
+</section>
 
 <style>
-	.full-page-view {
+	#full-page-view {
 		display: flex;
 		justify-content: center;
 		align-items: center;
