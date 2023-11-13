@@ -27,11 +27,11 @@
 </div>
 
 <script>
-    const scrolltrigger = document.querySelector("iconify-icon")
+    const scrolltrigger: HTMLElement = document.querySelector("iconify-icon") as HTMLElement
     const scrolldest    = document.querySelector(".about")
 
     scrolltrigger?.addEventListener('click', () => {
-        scrollTo({top: scrolldest.scrollHeight, behavior: 'smooth'})
+        scrollTo({top: scrolldest?.scrollHeight, behavior: 'smooth'})
     })
 </script>
 
