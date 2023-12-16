@@ -1,0 +1,56 @@
+---
+
+---
+
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js" />
+
+<div class="contact">
+    <a href="mailto:contact@dejaydev.com">
+        <iconify-icon
+            icon="heroicons:at-symbol-20-solid"
+            width="50"
+            height="50" />
+    </a>
+    <a href="https://djs.place">
+        <iconify-icon 
+            icon="simple-icons:discord" 
+            width="50" 
+            height="50"/>
+    </a>
+    <a href="https://twitter.com/DeJayDev">
+        <iconify-icon 
+            icon="simple-icons:x" 
+            width="50" 
+            height="50"/>
+    </a>
+</div>
+
+<style>
+    .contact {
+        display: flex;
+        flex-direction: row;
+        gap: 2em;
+        padding-top: 5%;
+        justify-content: center;
+    }
+
+    iconify-icon {
+        color: white;
+    }
+
+    iconify-icon:hover {
+        animation: bounce 1s infinite;
+    }
+
+    @keyframes bounce {
+        0%, 100% {
+          transform: none;
+          animation-timing-function: cubic-bezier(0,0,0.2,1);
+        }
+
+        50% {
+          transform: translateY(-25%);
+          animation-timing-function: cubic-bezier(0.8,0,1,1);
+        }
+    }
+</style>

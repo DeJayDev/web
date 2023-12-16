@@ -12,10 +12,10 @@ import '@fontsource/fredoka-one';
 </div>
 
 <div class="content">
-    <img class="topsvg" src="/sprite.svg" />
+    <img class="topsvg" src="/sprite.svg" alt="" />
     <h1>
         Hi! I'm Dj
-        <span class="subtitle">I make dreams come true </span>
+        <span class="subtitle">I make dreams come true</span>
     </h1>
 
     <h2>Let's get to know each other </h2>
@@ -28,25 +28,31 @@ import '@fontsource/fredoka-one';
 
 <script>
     const scrolltrigger: HTMLElement = document.querySelector("iconify-icon") as HTMLElement
-    const scrolldest    = document.querySelector(".about")
+    const scrolldest = document.querySelector(".welcome")
 
     scrolltrigger?.addEventListener('click', () => {
-        scrollTo({top: scrolldest?.scrollHeight, behavior: 'smooth'})
+        scrollTo({top: scrolldest?.clientHeight, behavior: 'smooth'})
     })
 </script>
 
 <style>
+    .topsvg {
+        max-width: 100%;
+    }
+
     .content {
-        z-index: 100;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         flex: 50%;
+        padding-left: 1em;
+        padding-right: 1em;
     }
 
     .subtitle {
         display: block;    
+        font-size: smaller;
     }
 
     iconify-icon {

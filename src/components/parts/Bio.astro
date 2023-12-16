@@ -1,0 +1,52 @@
+---
+const _age = 21;
+---
+
+<div class="bio">
+    <p class="text">
+        I'm Dj, a <span class="age">{_age}</span> year old full stack engineer
+        and project manager currently based in Houston, Texas. When I'm not
+        working on something, you can find me planning my next adventure,
+        pressing keys on the piano, or with my favorite people.
+        <br/><br/>
+        I love making things that make people happy, either professionally with
+        world class tooling to do their jobs easier, or
+        <a href="https://lessgames.com">just because they're having fun</a>.
+        I believe that programming is a form of art - creative expression - so
+        I try to keep my job fun however I can. Right now, I work primarily with
+        content creators, helping to create unique ideas with the help of my
+        team.
+        <br/><br/>
+        Think we could make something together? Let's talk about it! I'm happy
+        to help you fully flesh out an idea, no matter how long the planning
+        takes. Feel free to contact me through my email or Discord. My Twitter
+        DMs are open as well, while I don't recommend it. If it's easier for
+        you, that's an option too.
+    </p>
+    <div class="center">
+        Just pick your preferred method from the list below:
+    </div>
+</div>
+
+<style>
+    .bio {
+        height: 100%;
+        font-size: 20px;
+    }
+
+    .center {
+        margin-top: 1em;
+        text-align: center;
+    }
+</style>
+
+<script>
+    const target: HTMLElement = document.querySelector(".age")! as HTMLElement;
+    var birthDate = new Date("2002-03-30");
+    var currentDate: Date = new Date();
+
+    var ageInMilliseconds = +currentDate - +birthDate;
+    var ageInYears = ageInMilliseconds / (1000 * 60 * 60 * 24 * 365.25);
+    target.innerHTML = ageInYears.toFixed(4);
+    target.title = "As of " + currentDate.toLocaleString();
+</script>

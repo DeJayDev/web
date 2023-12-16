@@ -1,0 +1,32 @@
+---
+import Bio from "../parts/Bio.astro";
+import Contact from "../parts/Contact.astro";
+import Picture from "../parts/Picture.astro";
+---
+
+<div class="left">
+    <Bio/>
+    <Contact/>
+</div>
+
+<div class="right">
+    <Picture/>
+</div>
+
+<style>
+     .left, .right {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    } 
+
+    .left {
+        flex-direction: column;
+        margin-left: 2vw;
+    }
+
+    .right {
+        margin-right: 2vw;
+    }
+</style>

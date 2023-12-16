@@ -1,53 +1,73 @@
 ---
 interface Props {
-	title: string;
+    title: string;
 }
 
 const { title } = Astro.props;
+export const description = "Software Engineer - I help make dreams come true.";
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<meta name="darkreader-lock"/>
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+
+        <title>{title}</title>
+        <meta name="title" content={title} />
+        <meta name="description" content={description} />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://dejay.dev/" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content="https://dejay.dev/assets/logo.png" />
+        <!-- Other Favicons -->
+
+        <!-- Stuff that asked to be in the head -->
+        <link href="https://crunchy.social/@dejay" rel="me">
+        <meta name="darkreader-lock" />
+        <meta name="generator" content={Astro.generator} />
+    </head>
+    <body>
+        <slot />
+    </body>
 </html>
+
 <style is:global>
-	:root {
-    	--c-white: #EFEFEF;
-    	--c-purple: #9777C2;
-    	--c-dpurple: #8a65ba;
-	}
+    :root {
+        --c-white: #efefef;
+        --c-purple: #9777c2;
+        --c-dpurple: #8a65ba;
+    }
 
-	::-webkit-scrollbar {
-	    width: 12px;
-	    height: 12px;
-	}
+    ::-webkit-scrollbar {
+        width: 12px;
+        height: 12px;
+    }
 
-	::selection, ::-webkit-scrollbar-corner, ::-webkit-scrollbar-track {
-	    background-color: transparent;
-	}
+    ::selection,
+    ::-webkit-scrollbar-corner,
+    ::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
 
-	::-webkit-scrollbar-thumb {
-	    background-color: var(--c-dpurple);
-	}
-	
-	html, 
-	body {
-		font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
-		color: var(--c-white);
-    	background-color: var(--c-purple);
-		background-size: 224px;
-		scrollbar-color: var(--c-dpurple) black;
-    	scrollbar-width: thin;
-	}
+    ::-webkit-scrollbar-thumb {
+        background-color: var(--c-dpurple);
+    }
+
+    html,
+    body {
+        font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova",
+            "Nimbus Sans", Arial, sans-serif;
+        color: var(--c-white);
+        background-color: var(--c-purple);
+        scrollbar-color: var(--c-dpurple) black;
+        scrollbar-width: thin;
+    }
+
+    a {
+        color: var(--c-white);
+    }
 </style>

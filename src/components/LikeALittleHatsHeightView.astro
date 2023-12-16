@@ -6,16 +6,15 @@ interface Props {
 const { class: classname } = Astro.props;
 ---
 
-<section id="full-page-view" class={classname}>
+<section id="like-a-little-hats-height-view" class={classname}>
     <slot />
 </section>
 
 <style>
-    #full-page-view {
+    #like-a-little-hats-height-view {
         display: flex;
-        justify-content: space-between;
-        width: 100%;
+        justify-content: center;
         align-items: center;
-        height: 100vh;
+        height: 8vh;
     }
 </style>
