@@ -2,15 +2,36 @@
 // Thank you jhey:
 // https://twitter.com/jh3yy/status/1732836496061718648
 // https://codepen.io/jh3y/pen/bGjYyYR
-
 ---
 
 <!-- Credits in the Github Repo :) -->
 <svg viewBox="0 0 313 221" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M85 39C83.8628 67.9989 77 96.9793 77 126"/>
-    <path stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M51 8C101.906 -2.18115 160.221 -2.28254 205.111 27.4444C229.86 43.8336 244.38 83.9472 231.389 111.611C222.971 129.536 206.765 141.979 189.667 151.056C154.168 169.9 112.378 182.492 72.2222 185.222C53.0651 186.525 28.9569 186.252 11.4444 176.889C6.57033 174.283 3.68699 171.061 2 166"/>
-    <path class="dot" fill="black" stroke-linejoin="round" d="M264 100C264 101.657 262.657 103 261 103C259.343 103 258 101.657 258 100C258 98.3431 259.343 97 261 97C262.657 97 264 98.3431 264 100Z"/>
-    <path stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M264 123C264 143.707 260.363 162.543 249.778 180.667C242.919 192.41 231.291 215.805 216 218.778C198.882 222.106 196.837 197.749 204.389 187.5C208.561 181.839 216.489 173.02 224.389 175.722C240.982 181.399 255.628 192.138 271.5 199.444C278.058 202.463 289.948 209.906 297.5 207.389C307.465 204.067 310.4 189.998 311 181"/>
+    <path
+        stroke="black"
+        stroke-width="3"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M85 39C83.8628 67.9989 77 96.9793 77 126"></path>
+    <path
+        stroke="black"
+        stroke-width="3"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M51 8C101.906 -2.18115 160.221 -2.28254 205.111 27.4444C229.86 43.8336 244.38 83.9472 231.389 111.611C222.971 129.536 206.765 141.979 189.667 151.056C154.168 169.9 112.378 182.492 72.2222 185.222C53.0651 186.525 28.9569 186.252 11.4444 176.889C6.57033 174.283 3.68699 171.061 2 166"
+    ></path>
+    <path
+        class="dot"
+        fill="black"
+        stroke-linejoin="round"
+        d="M264 100C264 101.657 262.657 103 261 103C259.343 103 258 101.657 258 100C258 98.3431 259.343 97 261 97C262.657 97 264 98.3431 264 100Z"
+    ></path>
+    <path
+        stroke="black"
+        stroke-width="3"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M264 123C264 143.707 260.363 162.543 249.778 180.667C242.919 192.41 231.291 215.805 216 218.778C198.882 222.106 196.837 197.749 204.389 187.5C208.561 181.839 216.489 173.02 224.389 175.722C240.982 181.399 255.628 192.138 271.5 199.444C278.058 202.463 289.948 209.906 297.5 207.389C307.465 204.067 310.4 189.998 311 181"
+    ></path>
 </svg>
 
 <style>
@@ -23,43 +44,48 @@
         --end: 1.025;
         stroke-dasharray: var(--end);
         stroke-dashoffset: var(--end);
-        animation: draw calc(var(--path-speed) * 1s) calc(var(--path-delay, 0) * 1s) ease-in forwards;
+        animation: draw calc(var(--path-speed) * 1s)
+            calc(var(--path-delay, 0) * 1s) ease-in forwards;
     }
-    
+
     .dot {
         transform-box: fill-box;
         transform-origin: 50% 50%;
         fill: hsl(0 0% 0% / 0);
-        animation: draw calc(var(--path-speed) * 1s) calc(var(--path-delay, 0) * 1s) ease-in forwards,
-                   fill 0.5s calc(var(--human-delay) * 1s) forwards;
+        animation:
+            draw calc(var(--path-speed) * 1s) calc(var(--path-delay, 0) * 1s)
+                ease-in forwards,
+            fill 0.5s calc(var(--human-delay) * 1s) forwards;
     }
-    
+
     @keyframes fill {
-      to {
-        fill: hsl(0 0% 0% / 1);
-      }
+        to {
+            fill: hsl(0 0% 0% / 1);
+        }
     }
-    
+
     @keyframes draw {
-      to {
-        stroke-dashoffset: 0;
-      }
+        to {
+            stroke-dashoffset: 0;
+        }
     }
 </style>
 
 <script>
-    const PATHS = document.querySelectorAll('path')
-    const PX_PER_SEC = 620
-    let DELAY = 0
+    const PATHS = document.querySelectorAll("path");
+    const PX_PER_SEC = 620;
+    let DELAY = 0;
 
     for (const PATH of PATHS) {
-        const LEN = Math.ceil(PATH.getTotalLength())
-        const SPEED = LEN / PX_PER_SEC
-        PATH.setAttribute('pathLength', "1");
-        PATH.style.setProperty('--path-speed', SPEED.toString())
-        if (DELAY) PATH.style.setProperty('--path-delay', DELAY.toString())
-        DELAY += SPEED
+        const LEN = Math.ceil(PATH.getTotalLength());
+        const SPEED = LEN / PX_PER_SEC;
+        PATH.setAttribute("pathLength", "1");
+        PATH.style.setProperty("--path-speed", SPEED.toString());
+        if (DELAY) PATH.style.setProperty("--path-delay", DELAY.toString());
+        DELAY += SPEED;
     }
 
-    document.documentElement.style.setProperty('--human-delay', DELAY.toString())
+    for (const PATH of PATHS) {
+        PATH.style.setProperty("--human-delay", DELAY.toString());
+    }
 </script>
