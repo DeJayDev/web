@@ -6,121 +6,52 @@ I hereby claim:
 
   * I am an admin of https://dejaydev.com
   * I am dejay (https://keybase.io/dejay) on keybase.
-  * I have a public key ASC-6oYeA_yLYj9nVaM629vbI8CwMzmiMEFfS6ctH570Xwo
+  * I have a public key with fingerprint 2D88 5930 1BDA 8734 A47F  B975 747D 7E86 1002 D92A
 
 To do so, I am signing this object:
 
 {
   "body": {
     "key": {
-      "eldest_kid": "0120beea861e03fc8b623f6755a33adbdbdb23c0b03339a230415f4ba72d1f9ef45f0a",
+      "eldest_kid": "0116d2870ffec0f928cf67430adafee15e292deecbc9c8dad2c704b26f3aace5378f0a",
+      "fingerprint": "2d8859301bda8734a47fb975747d7e861002d92a",
       "host": "keybase.io",
-      "kid": "0120beea861e03fc8b623f6755a33adbdbdb23c0b03339a230415f4ba72d1f9ef45f0a",
+      "key_id": "747d7e861002d92a",
+      "kid": "0116d2870ffec0f928cf67430adafee15e292deecbc9c8dad2c704b26f3aace5378f0a",
       "uid": "4b715b4d8c0e3a637d0538d0877c6419",
       "username": "dejay"
     },
-    "merkle_root": {
-      "ctime": 1547178723,
-      "hash": "1b72f1580b1d7331dde87a3edc496daa930de48ea0d3696d5d56b4bbbcefea856cc5b92b16f6fb84738205b18b3cf48ad66e9a87cbc28a5c2ca27793f2ca8ffc",
-      "hash_meta": "9b8dceaa2ccf4524f74eaecc56b1ba2663a3d0507cd89b777822db3f06f01999",
-      "seqno": 4332091
-    },
     "service": {
-      "entropy": "10OgjKImx9ApKaCON3FEzUN6",
       "hostname": "dejaydev.com",
-      "protocol": "https:"
-    },
-    "type": "web_service_binding",
-    "version": 2
-  },
-  "client": {
-    "name": "keybase.io go client",
-    "version": "2.12.3"
-  },
-  "ctime": 1547178727,
-  "expire_in": 504576000,
-  "prev": "6eb28f9f8a01c1768285edf9c512c2f31791e273d36c7a5d37088af1197c8cd3",
-  "seqno": 72,
-  "tag": "signature"
-}
-
-which yields the signature:
-
-hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgvuqGHgP8i2I/Z1WjOtvb2yPAsDM5ojBBX0unLR+e9F8Kp3BheWxvYWTESpcCSMQgbrKPn4oBwXaChe35xRLC8xeR4nPTbHpdNwiK8Rl8jNPEIAG4GWRXt5fmTCdag6B3c4K+I+XYhAlqIshwUzpXas1jAgHCo3NpZ8RAzEM2iWz5xdpFP3kziZ78qw3xIwzNRzX1vfzCuH1jtgbfnBOChB/TsZ6U0Zirssq0MbP+CYXRdWKGivfZoVD9CKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEILXCGVQYQIekfe52CXCTfz0sg0WuGQ8IRkN+sfs7i9zYo3RhZ80CAqd2ZXJzaW9uAQ==
-
-And finally, I am proving ownership of this host by posting or
-appending to this document.
-
-View my publicly-auditable identity here: https://keybase.io/dejay
-
-==================================================================
-==================================================================
-https://keybase.io/dejay
---------------------------------------------------------------------
-
-I hereby claim:
-
-  * I am an admin of https://dejay.dev
-  * I am dejay (https://keybase.io/dejay) on keybase.
-  * I have a public key with fingerprint B42F 17CD 3997 24B0 FD1F  99B5 16C5 5689 3AA1 938D
-
-To do so, I am signing this object:
-
-{
-  "body": {
-    "key": {
-      "eldest_kid": "0120beea861e03fc8b623f6755a33adbdbdb23c0b03339a230415f4ba72d1f9ef45f0a",
-      "fingerprint": "b42f17cd399724b0fd1f99b516c556893aa1938d",
-      "host": "keybase.io",
-      "key_id": "16c556893aa1938d",
-      "kid": "01017acb65ac14bfdbdbd09720f9d6105dedbaedace2165774991d5a613506f48d1d0a",
-      "uid": "4b715b4d8c0e3a637d0538d0877c6419",
-      "username": "dejay"
-    },
-    "service": {
-      "hostname": "dejay.dev",
       "protocol": "https:"
     },
     "type": "web_service_binding",
     "version": 1
   },
-  "ctime": 1554302176,
+  "ctime": 1708017405,
   "expire_in": 157680000,
-  "prev": "0155f2aada56ba4346e3e0c5a209d680480aa8e093082142e389d3aeb51d67ad",
-  "seqno": 76,
+  "prev": "3f26a1a9d199e912cf9405cec94f22c784a808dd3e5848b786121bcaf3ccb6b1",
+  "seqno": 121,
   "tag": "signature"
 }
 
 which yields the signature:
 
 -----BEGIN PGP MESSAGE-----
-Version: Keybase OpenPGP v2.1.0
-Comment: https://keybase.io/crypto
 
-yMNnAnicbVJrTBRHHD8QtT0rQm24ttQqW2MgXMjse/fU1oRUUDBSoUAL5JjdnYVD
-eod3e1epJVBjbAxQizQKkgAF1EZaWoIpKhXKwzZ9IAieUcNLXhVOaGvPExIauktq
-0g/d+bCZ//5e89vpWb9Kp/cLuZ58wvR5eanfL52nnLr0hp6xI5hgk/Ix0xHsIFp5
-oVwJORTzQYuEmTCAE0BACHIMjgApi5zAEKTMsDQNSRJKgrYIUgQCIEmShwQJKJyW
-KQGyhITLPJIpWgYQM2KyxZqF7Hl2i1VRZQWKkHFWlEieZwlKALIG5gUaZ0SaZjie
-hBDnSU5Sidk2h8ZQwwnQgaIsNnWmbswr8f4H/zQ3wFkoCgwNRZwS5JWkQDUDMi8x
-OKAlJAkQSVBEBM7QLEvxPC7RkMFJGjAyxUm4tJLbuSJHCSxOC5TEiQCRkCFZCdCq
-HeBYVmQonNeADmS3wveQipZQDszHCoyYOnJZRKS1qh3jv5+jJORSWXl2m2ITbbnq
-OFtR8hwmjabk52m495Fg/lfBLFisktqgynAhu8Nis2ImXEWKikWTxGmaIgGBs4wR
-Q4fzLHZktmgImmU4oD6aj2qn1ULTMgGhBGlGgBRJMYhEQKQhAdRaOEBxAEIOAZ4E
-HIFTBCI5XiIhUv+MxLBQ69eBDlltmEmzUmCWqumwZFmh4rQjrKCrMz1A56fXrVnt
-r10tnf7ZoKcXrr9pw3LGsaLhQzrDQMZrWXD2alCd2z3u2dRVt77/5ITwwbXBXP9t
-kY8iC+/xSumI8v3GtFTX4nG6OowOpk4z9YW6ny4MlJUbg0yNeqG2JTNs7EBmTPS2
-Pc0Nsxef65mrnZh+tzUpcKm1xrVri5SSubDd+3JL+35PSDj/3dDvcfXJL5RciKsW
-WzYs4msN7knPmnZfze5bnraO1J1L/va34z+1D33049Huze6t57rGx9+68Uw88hTu
-aS07WtfrnIwInPIu7I2tPO1l4XIxZfSWB/Y++Cb/CfF4dLYZzKfevXfcHmXo3nGq
-LHrmz7HEP9IuUaudo5W76mPpm69cI5LTH9Seub/kE68GnMteLHbcLRFejKs68/yb
-mwte39TsvjGgGCt+Hhp7tc+9bian5o37LYtnY+Zv1l9J6vThhzP7atOm/vaGFhy7
-fitLXzncW/FOVdTk9v5knkDxRR/P1EcUG26f/eGrD1tWrTu5Jb1rudd3fmvKxsic
-jpGY/blyaMe10cbOkE92zqXviwxoCrtDeC5/2eRNiD5QWvKkMT1jXkkInUrsG9S1
-dTeSOP9XwrSvfcJbGV6LfTYePB28VrgT1DniXJguOv9QX/p4YVa2lxhOxAZHDCbt
-q8j0zfzWMferoS/86wXzZee3bSVlREro3uHbrqHmhsSL1bGPiN1JflUvXdnxxcNL
-yeHG4n8AfZLQuQ==
-=eR6B
+owJ4nK1SPYgUMRid07W4hRNB2EZUjBzKsRxJJjNJthEU8SxVRBBhyc+XvfFuZ9aZ
+2dVlPW21EM5WsLSwEUUbQRDRwh9YLEQFwVb0QMFSxDOzeGBhaZqQ73vv5X2Pb3Vm
+c1BvPOtnU/cv71idevVZBzA+EoyQzuwQtUZoCSYXLFsoyvZSYlELYUJiSwXHzoHB
+TlJhXMxZiJVVDoBEQCW1AEYbaYRVlhqOmaaxC5UyEIVcOKxQE7kk7UDey5O09LLU
+ChHJEBNtleAhU4w7LXnEGbccREwwplbSiriYFRXDm9OqgPkk8zX/aE/s/QP/n333
+J3JMcxJpZoXBEKo45BZHobBYcG5iRmQFLCBPVRc82sJZNUQrTeRLg8RAlWo1xt9t
+C4N5k3U9sZdnZWayZd9ZLMte0aqY5bBXQc+Dbv8RaesktT5EzxhAXiRZilrEI02Z
+VKqEY4EJZzhqIrjQS3JoJxUi4rHA/lT/wMBLho7GiihpySkpQRJqnPQsA0YyR30M
+gimBhbUhRIIJzX26lGijXGiMjjVB1Vzn0syLU+Kdqo5XLZJOqsp+DmilfqVfCxr1
+YGdjT23X99dbP/yYm4WH4/7G5m3ZVK1dUJ/etlG5dij4FW2/+/bF4/1zze7720yt
+XXpX+3R8+uOd6+Oft+7NHt17Olg/uPby64Gnb04+P7Zw4uaTq1/W942ib4cXHlx8
+tLvbOHNj5jdbvO0E
+=m0O8
 -----END PGP MESSAGE-----
 
 And finally, I am proving ownership of this host by posting or
