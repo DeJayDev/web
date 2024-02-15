@@ -60,3 +60,65 @@ appending to this document.
 View my publicly-auditable identity here: https://keybase.io/dejay
 
 ==================================================================
+==================================================================
+https://keybase.io/dejay
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://dejay.dev
+  * I am dejay (https://keybase.io/dejay) on keybase.
+  * I have a public key with fingerprint 2D88 5930 1BDA 8734 A47F  B975 747D 7E86 1002 D92A
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0116d2870ffec0f928cf67430adafee15e292deecbc9c8dad2c704b26f3aace5378f0a",
+      "fingerprint": "2d8859301bda8734a47fb975747d7e861002d92a",
+      "host": "keybase.io",
+      "key_id": "747d7e861002d92a",
+      "kid": "0116d2870ffec0f928cf67430adafee15e292deecbc9c8dad2c704b26f3aace5378f0a",
+      "uid": "4b715b4d8c0e3a637d0538d0877c6419",
+      "username": "dejay"
+    },
+    "service": {
+      "hostname": "dejay.dev",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1708017859,
+  "expire_in": 157680000,
+  "prev": "03343e1f71141ce0b445c234457134407e972b48a94de96e0d7fbc26f550ecdf",
+  "seqno": 122,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+
+owJ4nK1SPWsUQRje01i40SCC14iKg1GQI87X7sxe40eVwkLFRhCO+Xj3sibuXnb3
+zjtisDCFlRxWIgjmN1gJsYsfRAkiSEB/gZ1YptGZw4CFpVO8w7zzPM/7vs/M+PD+
+IGxu9ovGywfHx40P33UA2/NvV5Au7Ai1V9AiTDZYslDVncXMojbChMSWSoHTFAxO
+EypNGgvOsLIqBSAR0IRaAKNNYqRVlhqBuaZxypQyEDEhU6xQC6VZ3oWyV2Z57WSp
+lTJKGCbaKikYV1ykOhGR4MIKkDHBmNqEeuJCUXmGa06rCuaywuXcoTNp7x/4/9x3
+fyLHtSCR5lYaDEzFTFgcMWmxFMLEnCQeWEGZq7vg0BbuqBFabSGXGmQGvKt+jL+v
+5ywMHKtXFnVhiiWXXqjrXtX2tHrU87h7oDt/FDo6y61z0DEGUFZZkaM2cUhTZ16S
+CCwxEc7SFoJhLyuhk3lEJGKJ3fJ1XDlnC2OcAUkFIZzcNIA155GhzEVBXMQCEkE1
+lyrhFpIYsHUPY5wtUYTB2BT5oZbzwolT6jpVXadaZd1c1f0S0Gr4qD8VNMPgRPP0
+1Mmfn2a+7Z6fhVfb/b1vd2Cf/3NBePDIXubiseDX8vvpreuvrz2bv/xx80q+Xg8f
+n/t6+/OF9TMPT70bnT002wi2pnfVpedfip3mjae3jm4M3pC1arhzP7y69uLHxvjJ
+zG9uTOix
+=NnsW
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/dejay
+
+==================================================================
