@@ -7,16 +7,16 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "tunnel": "cloudflared tunnel run"
   },
   "dependencies": {
-    "@astrojs/check": "^0.3.1",
-    "@astrojs/preact": "^3.0.1",
+    "@astrojs/check": "^0.5.4",
+    "@astrojs/preact": "^3.1.0",
     "@fontsource/fredoka-one": "^5.0.5",
-    "@heroicons/react": "^2.0.18",
-    "astro": "^4.0.3",
-    "preact": "^10.19.3",
-    "react-icons": "^4.12.0",
+    "astro": "^4.4.0",
+    "iconify-icon": "^2.0.0",
+    "preact": "^10.19.4",
     "typescript": "^5.3.3"
   }
 }

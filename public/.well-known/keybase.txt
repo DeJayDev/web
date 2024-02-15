@@ -1,0 +1,62 @@
+==================================================================
+https://keybase.io/dejay
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://dejaydev.com
+  * I am dejay (https://keybase.io/dejay) on keybase.
+  * I have a public key with fingerprint 2D88 5930 1BDA 8734 A47F  B975 747D 7E86 1002 D92A
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0116d2870ffec0f928cf67430adafee15e292deecbc9c8dad2c704b26f3aace5378f0a",
+      "fingerprint": "2d8859301bda8734a47fb975747d7e861002d92a",
+      "host": "keybase.io",
+      "key_id": "747d7e861002d92a",
+      "kid": "0116d2870ffec0f928cf67430adafee15e292deecbc9c8dad2c704b26f3aace5378f0a",
+      "uid": "4b715b4d8c0e3a637d0538d0877c6419",
+      "username": "dejay"
+    },
+    "service": {
+      "hostname": "dejaydev.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1708017405,
+  "expire_in": 157680000,
+  "prev": "3f26a1a9d199e912cf9405cec94f22c784a808dd3e5848b786121bcaf3ccb6b1",
+  "seqno": 121,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+
+owJ4nK1SPYgUMRid07W4hRNB2EZUjBzKsRxJJjNJthEU8SxVRBBhyc+XvfFuZ9aZ
+2dVlPW21EM5WsLSwEUUbQRDRwh9YLEQFwVb0QMFSxDOzeGBhaZqQ73vv5X2Pb3Vm
+c1BvPOtnU/cv71idevVZBzA+EoyQzuwQtUZoCSYXLFsoyvZSYlELYUJiSwXHzoHB
+TlJhXMxZiJVVDoBEQCW1AEYbaYRVlhqOmaaxC5UyEIVcOKxQE7kk7UDey5O09LLU
+ChHJEBNtleAhU4w7LXnEGbccREwwplbSiriYFRXDm9OqgPkk8zX/aE/s/QP/n333
+J3JMcxJpZoXBEKo45BZHobBYcG5iRmQFLCBPVRc82sJZNUQrTeRLg8RAlWo1xt9t
+C4N5k3U9sZdnZWayZd9ZLMte0aqY5bBXQc+Dbv8RaesktT5EzxhAXiRZilrEI02Z
+VKqEY4EJZzhqIrjQS3JoJxUi4rHA/lT/wMBLho7GiihpySkpQRJqnPQsA0YyR30M
+gimBhbUhRIIJzX26lGijXGiMjjVB1Vzn0syLU+Kdqo5XLZJOqsp+DmilfqVfCxr1
+YGdjT23X99dbP/yYm4WH4/7G5m3ZVK1dUJ/etlG5dij4FW2/+/bF4/1zze7720yt
+XXpX+3R8+uOd6+Oft+7NHt17Olg/uPby64Gnb04+P7Zw4uaTq1/W942ib4cXHlx8
+tLvbOHNj5jdbvO0E
+=m0O8
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/dejay
+
+==================================================================
