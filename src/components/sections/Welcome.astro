@@ -1,6 +1,6 @@
 ---
 import '@fontsource/fredoka-one';
-import 'iconify-icon';
+import { Icon } from 'astro-icon/components';
 ---
 
 <div class="warning">
@@ -19,14 +19,14 @@ import 'iconify-icon';
 
     <h2>Let's get to know each other </h2>
 
-    <iconify-icon
-        icon="heroicons:chevron-double-down-20-solid" 
-        width="50" 
-        height="50"/>
+    <Icon
+        name="heroicons:chevron-double-down-20-solid" 
+        width={50}
+        height={50}/>
 </div>
 
 <script>
-    const scrolltrigger: HTMLElement = document.querySelector("iconify-icon") as HTMLElement
+    const scrolltrigger: HTMLElement = document.querySelector("[data-icon]") as HTMLElement
     const scrolldest = document.querySelector(".welcome")
 
     scrolltrigger?.addEventListener('click', () => {
@@ -54,7 +54,7 @@ import 'iconify-icon';
         font-size: smaller;
     }
 
-    iconify-icon {
+    [data-icon] {
         cursor: pointer;
         margin: 10px;
     }

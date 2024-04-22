@@ -1,25 +1,26 @@
 ---
-import 'iconify-icon'
+import { Icon } from "astro-icon/components";
+
 ---
 
 <div class="contact">
     <a href="mailto:contact@dejaydev.com">
-        <iconify-icon
-            icon="heroicons:envelope-open-20-solid"
-            width="50"
-            height="50" />
+        <Icon
+            name="heroicons:envelope-open-20-solid"
+            width={50}
+            height={50} />
     </a>
     <a href="https://djs.place">
-        <iconify-icon 
-            icon="simple-icons:discord" 
-            width="50" 
-            height="50"/>
+        <Icon 
+            name="simple-icons:discord" 
+            width={50} 
+            height={50}/>
     </a>
     <a href="https://twitter.com/DeJayDev">
-        <iconify-icon 
-            icon="simple-icons:x" 
-            width="50" 
-            height="50"/>
+        <Icon 
+            name="simple-icons:x" 
+            width={50} 
+            height={50}/>
     </a>
 </div>
 
@@ -32,12 +33,12 @@ import 'iconify-icon'
         justify-content: center;
     }
 
-    iconify-icon {
+    [data-icon] {
         color: white;
         transition: transform .33s ease-in-out;
     }
 
-    iconify-icon:hover {
+    [data-icon]:hover {
         transform: translateY(-25%);
     }
 </style>

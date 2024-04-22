@@ -12,11 +12,15 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.5.10",
-    "@astrojs/preact": "^3.1.1",
+    "@astrojs/preact": "^3.2.0",
     "@fontsource/fredoka-one": "^5.0.5",
-    "astro": "^4.5.9",
-    "iconify-icon": "^2.0.0",
-    "preact": "^10.20.1",
-    "typescript": "^5.4.3"
+    "astro": "^4.6.3",
+    "astro-icon": "^1.1.0",
+    "preact": "^10.20.2",
+    "typescript": "^5.4.5"
+  },
+  "devDependencies": {
+    "@iconify-json/heroicons": "^1.1.20",
+    "@iconify-json/simple-icons": "^1.1.100"
   }
 }
