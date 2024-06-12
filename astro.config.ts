@@ -6,6 +6,7 @@ import { defineConfig } from "astro/config"
 export default defineConfig({
     integrations: [icon(), preact()],
     output: "static",
+    site: "https://dejay.dev",
     server: {
         port: 3000,
     },

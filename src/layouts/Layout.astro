@@ -17,12 +17,13 @@ export const description = "Software Engineer - I help make dreams come true."
         <meta name="title" content={title} />
         <meta name="description" content={description} />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="canonical" href={Astro.url} />
 
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://dejay.dev/" />
+        <meta property="og:url" content={Astro.url} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
-        <meta property="og:image" content="https://dejay.dev/assets/logo.png" />
+        <meta property="og:image" content={`${Astro.url}/assets/logo.png`} />
         <!-- Other Favicons -->
 
         <!-- Stuff that asked to be in the head -->
