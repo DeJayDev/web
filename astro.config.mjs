@@ -6,7 +6,7 @@ import icon from "astro-icon";
 // https://astro.build/config
 export default defineConfig({
   adapter: cloudflare({
-    imageService: "cloudflare"
+    imageService: "noop"
   }),
   integrations: [icon({
     include: {
