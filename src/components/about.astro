@@ -1,0 +1,44 @@
+---
+import Distance from "./distance.astro"
+
+const DOB = new Date("2002-03-30")
+---
+
+<p>
+    I am a <span class="age">{new Date().getFullYear() - DOB.getFullYear()}</span> year old full stack software engineer and project manager currently based in Houston, Texas.
+    (We're <Distance/> apart!)
+    When I'm not working, I enjoy traveling to see my friends, playing the piano, or spending time with my loved ones.
+    <br/><br/>
+    I love making things that make people happy. Either because they're having fun with it or because it makes their lives easier or even better. 
+    Programming, to me, is a form of creative expression and I try to have fun making the things I make for myself and others. 
+</p>
+
+{/*
+<p>
+    Donec finibus, libero quis cursus ornare, urna diam blandit augue, a tempus elit justo sed lorem. Donec maximus, urna vel pretium consectetur, mi leo vehicula orci, at elementum ligula turpis non eros. Nullam sed tellus commodo, venenatis neque vitae, dictum odio. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed sapien diam, vulputate egestas finibus eget, sollicitudin vel purus. Suspendisse sed porta augue. Sed egestas tempus arcu, at dignissim neque porttitor sed. Pellentesque quam lectus, fringilla nec consectetur in, vehicula et mi. Donec consectetur eros non nibh sodales, vel aliquet turpis finibus.
+</p>
+*/}
+
+<script>
+    const target: HTMLElement = document.querySelector(".age")! as HTMLElement;
+    const birthDate = new Date("2002-03-30");
+    const currentDate = new Date();
+
+    const ageInMilliseconds = +currentDate - +birthDate; 
+
+    const MS_PER_YEAR = 1000 * 60 * 60 * 24 * 365.25;
+    const MS_PER_DAY = 1000 * 60 * 60 * 24;
+    const MS_PER_HOUR = 1000 * 60 * 60;
+    const MS_PER_MINUTE = 1000 * 60;
+
+    // Calculate age in each unit
+    const ageInYears = Math.floor(ageInMilliseconds / MS_PER_YEAR);
+    const ageInDays = Math.floor((ageInMilliseconds % MS_PER_YEAR) / MS_PER_DAY);
+    const ageInHours = Math.floor((ageInMilliseconds % MS_PER_DAY) / MS_PER_HOUR);
+    const ageInMinutes = Math.floor((ageInMilliseconds % MS_PER_HOUR) / MS_PER_MINUTE);
+
+    target.title = `That's ${ageInYears} years, `
+        + `${ageInDays} days, `
+        + `${ageInHours} hours, and `
+        + `${ageInMinutes} minutes old!`
+</script>

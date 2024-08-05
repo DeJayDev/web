@@ -1,0 +1,21 @@
+/* custom.css overrides neat so that we can make changes to the framework without conflicts */
+
+:root { 
+    /* Removes an ugly top border. See codazoda/neatcss#46 */
+    border-top: none; 
+    /* Updates colors to my colorway on light theme */
+    --light: #fff;
+    --lesslight: #efefef;
+    --dark: #9777c2;
+    --moredark: #8a65ba;
+}
+
+/* Updates colors to my colorway on dark theme. "confusingly inverse" */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --light: #8a65ba;
+        --lesslight: #9777c2;
+        --dark: #eee;
+        --moredark: #fefefe;
+    }
+}

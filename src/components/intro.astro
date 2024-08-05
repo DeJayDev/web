@@ -1,0 +1,46 @@
+---
+import { Image } from "astro:assets";
+
+const IMG_ALT = "test";
+---
+
+<div class="container">
+    <div class="intro">
+        <h1>
+            Hi, I'm Dj
+        </h1>
+
+        <p>
+            I make dreams come true :)
+        </p>
+    </div>
+
+    <figure>
+        <Image src="/dj.jpg" alt={IMG_ALT} height={4032} width={3024} />
+
+        <figcaption>{IMG_ALT}</figcaption>
+    </figure>
+</div>
+
+<style>
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 1em;
+    }
+
+    img {
+        object-fit: cover;
+        height: 256px;
+        width: 256px;
+    }
+
+    figure {
+        margin-right: 0;
+    }
+
+    figcaption {
+        text-align: center;
+    }
+</style>
