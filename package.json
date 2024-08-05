@@ -11,17 +11,15 @@
         "tunnel": "cloudflared tunnel run"
     },
     "dependencies": {
-        "@astrojs/check": "^0.7.0",
-        "@astrojs/preact": "^3.4.0",
+        "@astrojs/check": "^0.9.1",
         "@fontsource/fredoka-one": "^5.0.5",
-        "astro": "^4.10.2",
+        "astro": "^4.13.1",
         "astro-icon": "^1.1.0",
-        "preact": "^10.22.0",
-        "typescript": "^5.4.5"
+        "typescript": "^5.5.4"
     },
     "devDependencies": {
-        "@biomejs/biome": "1.8.1",
-        "@iconify-json/heroicons": "^1.1.21",
-        "@iconify-json/simple-icons": "^1.1.105"
+        "@biomejs/biome": "1.8.3",
+        "@iconify-json/heroicons": "^1.1.24",
+        "@iconify-json/simple-icons": "^1.1.112"
     }
 }
