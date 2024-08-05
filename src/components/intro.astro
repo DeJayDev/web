@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import Socials from "./socials.astro";
 
 const IMG_ALT = "test";
 ---
@@ -13,10 +14,12 @@ const IMG_ALT = "test";
         <p>
             I make dreams come true :)
         </p>
+
+        <Socials/>
     </div>
 
     <figure>
-        <Image src="/dj.jpg" alt={IMG_ALT} height={4032} width={3024} />
+        <Image src="/dj.jpg" title={IMG_ALT} alt={IMG_ALT} height={4032} width={3024} />
 
         <figcaption>{IMG_ALT}</figcaption>
     </figure>
@@ -34,6 +37,7 @@ const IMG_ALT = "test";
         object-fit: cover;
         height: 256px;
         width: 256px;
+        border-radius: 16px;
     }
 
     figure {

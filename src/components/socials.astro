@@ -1,0 +1,42 @@
+---
+import { Icon } from "astro-icon/components"
+---
+
+<div class="contact">
+    <a href="https://twitter.com/DeJayDev">
+        <Icon 
+            name="simple-icons:x" 
+            width={32} 
+            height={32}/>
+    </a>
+    <a href="mailto:contact@dejaydev.com">
+        <Icon
+            name="heroicons:envelope-open-20-solid"
+            width={32}
+            height={32} />
+    </a>
+    <a href="https://djs.place">
+        <Icon 
+            name="simple-icons:discord" 
+            width={32} 
+            height={32}/>
+    </a>
+</div>
+
+<style>
+    .contact {
+        display: flex;
+        flex-direction: row;
+        gap: 2em;
+        padding-top: 5%;
+    }
+
+    [data-icon] {
+        color: var(--daark);
+        transition: transform .33s ease-in-out;
+    }
+
+    [data-icon]:hover {
+        transform: translateY(-25%);
+    }
+</style>

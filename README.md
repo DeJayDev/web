@@ -8,4 +8,4 @@ This project uses the [MIT License](./LICENSE), which allows you to freely use, 
 
 ## Attribution
 
-Icons provided through [Iconify Icon](https://iconify.design/docs/iconify-icon/). This website uses icons from [Simple Icons](https://simpleicons.org/)
+Icons provided through [Iconify Icon](https://iconify.design/docs/iconify-icon/). This website uses icons from [heroicons solid](https://heroicons.com/solid) and [Simple Icons](https://simpleicons.org/)
