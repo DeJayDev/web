@@ -1,12 +1,9 @@
 ---
-import Distance from "./distance.astro"
-
 const DOB = new Date("2002-03-30")
 ---
 
 <p>
     I am a <span class="age">{new Date().getFullYear() - DOB.getFullYear()}</span> year old full stack software engineer and project manager currently based in Houston, Texas.
-    (We're <Distance server:defer> <span slot="fallback">......</span> </Distance> apart!)
     When I'm not working, I enjoy traveling to see my friends, playing the piano, or spending time with my loved ones.
     <br/><br/>
     I love making things that make people happy. Either because they're having fun with it or because it makes their lives easier or even better. 
