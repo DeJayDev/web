@@ -1,8 +1,8 @@
 ---
-import { Image } from "astro:assets";
-import Socials from "./socials.astro";
+import { Image } from "astro:assets"
+import Socials from "./socials.astro"
 
-const IMG_ALT = "test";
+const IMG_ALT = "test"
 ---
 
 <div class="container">
@@ -19,7 +19,7 @@ const IMG_ALT = "test";
     </div>
 
     <figure>
-        <Image src="/dj.jpg" title={IMG_ALT} alt={IMG_ALT} height={4032} width={3024} />
+        <Image src="/dj.jpg" loading="eager" title={IMG_ALT} alt={IMG_ALT} height={4032} width={3024} />
 
         <figcaption>{IMG_ALT}</figcaption>
     </figure>
@@ -27,10 +27,9 @@ const IMG_ALT = "test";
 
 <style>
     .container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-top: 1em;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
     }
 
     img {
@@ -40,7 +39,16 @@ const IMG_ALT = "test";
         border-radius: 16px;
     }
 
+    .intro {
+        align-content: center;
+        grid-column: span 2 / span 2;
+        grid-row: span 2 / span 2;
+    }
+
     figure {
+        grid-row: span 2 / span 2;
+        grid-column-start: 3;
+        margin-left: 0;
         margin-right: 0;
     }
 

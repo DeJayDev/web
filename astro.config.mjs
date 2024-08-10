@@ -17,7 +17,7 @@ export default defineConfig({
       heroicons: ["envelope-open-20-solid"]
     }
   })],
-  output: "server",
+  output: "hybrid",
   server: {
     port: 3000
   },

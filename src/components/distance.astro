@@ -1,25 +1,23 @@
 ---
-const JSC_LAT = 29.55937
-const JSC_LON = -95.08994
+const REF_LAT = 29.55937
+const REF_LON = -95.08994
 
 const shouldUseMiles = Astro.locals.runtime.cf?.country === "US"
 
 // Adapted from https://stackoverflow.com/a/48805273/7038817
 function distanceFromJSC(lat: string, lon: string) {
-    const jscLatRad = JSC_LAT * (Math.PI / 180.0)
-    const jscLonRad = JSC_LON * (Math.PI / 180.0)
+    const refLatRad = REF_LAT * (Math.PI / 180.0)
+    const refLonRad = REF_LON * (Math.PI / 180.0)
     const userLatRad = +lat * (Math.PI / 180.0)
     const userLonRad = +lon * (Math.PI / 180.0)
 
     // This is the Haversine Formula: https://en.wikipedia.org/wiki/Haversine_formula
-    const a =
-        Math.sin((jscLatRad - userLatRad) / 2) ** 2 +
-        Math.sin((jscLonRad - userLonRad) / 2) ** 2 * Math.cos(jscLatRad) * Math.cos(userLatRad);
-    const c = 2 * Math.asin(Math.sqrt(a));
-    
-    let dist = 6371 * c;
+    const a = Math.sin((refLatRad - userLatRad) / 2) ** 2 + Math.sin((refLonRad - userLonRad) / 2) ** 2 * Math.cos(refLatRad) * Math.cos(userLatRad)
+    const c = 2 * Math.asin(Math.sqrt(a))
 
-    if(shouldUseMiles) {
+    let dist = 6371 * c
+
+    if (shouldUseMiles) {
         dist /= 1.60934
     }
 
