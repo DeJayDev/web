@@ -12,15 +12,14 @@
   "dependencies": {
     "@astrojs/check": "^0.9.3",
     "@astrojs/cloudflare": "^11.0.4",
-    "@fontsource-variable/grandstander": "^5.0.22",
-    "astro": "^4.14.6",
+    "astro": "^4.15.6",
     "astro-icon": "^1.1.1",
-    "lightningcss": "^1.26.0",
-    "typescript": "^5.5.4"
+    "lightningcss": "^1.27.0",
+    "typescript": "^5.6.2"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.8.3",
-    "@iconify-json/heroicons": "^1.1.24",
-    "@iconify-json/simple-icons": "^1.1.115"
+    "@biomejs/biome": "^1.9.1",
+    "@iconify-json/heroicons": "^1.2.0",
+    "@iconify-json/simple-icons": "^1.2.2"
   }
 }
