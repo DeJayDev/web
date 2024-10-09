@@ -10,16 +10,16 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.3",
-    "@astrojs/cloudflare": "^11.0.4",
-    "astro": "^4.15.6",
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/cloudflare": "^11.1.0",
+    "astro": "^4.15.12",
     "astro-icon": "^1.1.1",
     "lightningcss": "^1.27.0",
-    "typescript": "^5.6.2"
+    "typescript": "^5.6.3"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.9.1",
-    "@iconify-json/heroicons": "^1.2.0",
-    "@iconify-json/simple-icons": "^1.2.2"
+    "@biomejs/biome": "^1.9.3",
+    "@iconify-json/heroicons": "^1.2.1",
+    "@iconify-json/simple-icons": "^1.2.7"
   }
 }
