@@ -3,6 +3,8 @@ const REF_LAT = 29.55937
 const REF_LON = -95.08994
 
 const shouldUseMiles = Astro.locals.runtime.cf?.country === "US"
+const refMiles = 75;
+const refKilometers = refMiles * 1.60934; 
 
 // Adapted from https://stackoverflow.com/a/48805273/7038817
 function distanceFrom() {
@@ -19,6 +21,11 @@ function distanceFrom() {
 
     if (shouldUseMiles) {
         dist /= 1.60934
+        if(dist <= refKilometers) {
+            dist = 0
+        }
+    } else if (dist <= refMiles) {
+        dist = 0
     }
 
     return dist.toFixed(2)
@@ -26,5 +33,7 @@ function distanceFrom() {
 ---
 
 <span>
-    We're {distanceFrom()} {shouldUseMiles ? "mi" : "km"} apart!
+    ({!Number.parseFloat(distanceFrom()) ? 
+        "Come say hello!" : `We're ${distanceFrom() } ${shouldUseMiles ? "mi" : "km"} apart!`
+    })
 </span>

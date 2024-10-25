@@ -1,8 +1,9 @@
 ---
+import DjPicture from "@assets/woodbine.jpg"
 import { Image } from "astro:assets"
 import Socials from "./socials.astro"
 
-const IMG_ALT = "test"
+const IMG_ALT = "Woodbine Beach, Ontario"
 ---
 
 <div class="container">
@@ -19,7 +20,7 @@ const IMG_ALT = "test"
     </div>
 
     <figure>
-        <Image src="/dj.jpg" loading="eager" title={IMG_ALT} alt={IMG_ALT} height={4032} width={3024} />
+        <Image src={DjPicture} loading="eager" title={IMG_ALT} alt={IMG_ALT} />
 
         <figcaption>{IMG_ALT}</figcaption>
     </figure>
