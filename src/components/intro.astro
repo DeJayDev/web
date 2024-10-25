@@ -6,7 +6,7 @@ import Socials from "./socials.astro"
 const IMG_ALT = "Woodbine Beach, Ontario"
 ---
 
-<div class="container">
+<div class="row">
     <div class="intro">
         <h1>
             Hi, I'm Dj
@@ -27,12 +27,6 @@ const IMG_ALT = "Woodbine Beach, Ontario"
 </div>
 
 <style>
-    .container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-    }
-
     img {
         object-fit: cover;
         height: 256px;
@@ -42,18 +36,29 @@ const IMG_ALT = "Woodbine Beach, Ontario"
 
     .intro {
         align-content: center;
-        grid-column: span 2 / span 2;
-        grid-row: span 2 / span 2;
     }
 
     figure {
-        grid-row: span 2 / span 2;
-        grid-column-start: 3;
-        margin-left: 0;
-        margin-right: 0;
+        flex: 1;
+        flex-direction: column;
+        align-items: center;
     }
 
     figcaption {
+        padding-top: 1em;
         text-align: center;
+        width: 256px;
+    }
+
+    @media (min-width: 600px) {
+        figure {
+            margin-right: 0;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .intro {
+            text-align: center;
+        }
     }
 </style>

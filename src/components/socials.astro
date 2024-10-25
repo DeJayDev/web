@@ -2,7 +2,7 @@
 import { Icon } from "astro-icon/components"
 ---
 
-<div class="contact">
+<div class="socials">
     <a href="https://twitter.com/DeJayDev">
         <Icon
             name="simple-icons:x"
@@ -27,7 +27,7 @@ import { Icon } from "astro-icon/components"
 </div>
 
 <style>
-    .contact {
+    .socials {
         display: flex;
         flex-direction: row;
         gap: 2em;
@@ -41,5 +41,11 @@ import { Icon } from "astro-icon/components"
 
     [data-icon]:hover {
         transform: translateY(-25%);
+    }
+
+    @media (max-width: 600px) {
+        .socials {
+            justify-content: center;
+        }
     }
 </style>

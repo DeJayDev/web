@@ -20,6 +20,13 @@
     }
 }
 
+/* Adds `twocol` class to ul */
+@media (min-width: 600px) {
+    ul.twocol {
+        column-count: 2;
+    }
+}
+
 /* Adds styling similiar to `input` for `progress` */
 progress {
     vertical-align: baseline;
