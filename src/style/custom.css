@@ -4,10 +4,10 @@
     /* Removes an ugly top border. See codazoda/neatcss#46 */
     border-top: none;
     /* Updates colors to my colorway on light theme. */
-    --light: #fff;
-    --lesslight: #efefef;
-    --dark: #9777c2;
-    --moredark: #8a65ba;
+    --light: #9777c2;  
+    --lesslight: #8a65ba;
+    --dark: #fefefe;
+    --moredark: #eee;
 }
 
 /* Updates colors to my colorway on dark theme. "confusingly inverse" */
@@ -18,4 +18,18 @@
         --dark: #eee;
         --moredark: #fefefe;
     }
+}
+
+/* Adds styling similiar to `input` for `progress` */
+progress {
+    vertical-align: baseline;
+}
+
+/* CSS Resetting -- https://www.joshwcomeau.com/css/custom-css-reset/ */
+body {
+    -webkit-font-smoothing: antialiased;
+}
+
+input, button, textarea, select {
+    font: inherit;
 }
