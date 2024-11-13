@@ -1,0 +1,19 @@
+name: Reroll Image
+
+on:
+  schedule:
+    - cron: '27 04 * * 1'
+  workflow_dispatch:
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Should Continue?
+        run: echo "EXECUTING=$((RANDOM % 2))" >> $GITHUB_ENV
+
+      - name: Trigger Rebuild
+        if: $${{ EXECUTING == true }}
+        run: curl -X POST ${{secrets.CLOUDFLARE_DEPLOY_HOOK}}
+        
