@@ -14,6 +14,6 @@ jobs:
         run: echo "EXECUTING=$((RANDOM % 2))" >> $GITHUB_ENV
 
       - name: Trigger Rebuild
-        if: $${{ EXECUTING == true }}
+        if: $${{ env.EXECUTING == true }}
         run: curl -X POST ${{secrets.CLOUDFLARE_DEPLOY_HOOK}}
         
