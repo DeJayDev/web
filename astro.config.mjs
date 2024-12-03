@@ -8,9 +8,6 @@ export default defineConfig({
   adapter: cloudflare({
     imageService: "passthrough",
   }),
-  experimental: {
-    serverIslands: true,
-  },
   integrations: [
     icon({
       include: {
@@ -19,10 +16,10 @@ export default defineConfig({
       },
     }),
   ],
-  output: "hybrid",
   server: {
     port: 3000,
   },
+  serverIslands: true,
   site: "https://dejay.dev",
   vite: {
     css: {
