@@ -1,0 +1,41 @@
+---
+import { Image } from "astro:assets"
+import DjPicture from "@assets/woodbine.jpg"
+
+const IMG_ALT = "Woodbine Beach, Ontario"
+---
+
+<figure>
+    <Image src={DjPicture} loading="eager" title={IMG_ALT} alt={IMG_ALT} />
+
+    <figcaption>{IMG_ALT}</figcaption>
+</figure>
+
+<style>
+    img {
+        object-fit: cover;
+        height: 256px;
+        width: 256px;
+        border-radius: 16px;
+    }
+
+    figure {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    figcaption {
+        padding-top: 0.5em;
+        text-align: center;
+        width: 256px;
+    }
+
+    @media (min-width: 600px) {
+        figure {
+            margin-right: 0;
+        }
+    }
+</style>
+

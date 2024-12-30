@@ -1,9 +1,8 @@
 ---
-import DjPicture from "@assets/woodbine.jpg"
-import { Image } from "astro:assets"
+import { Icon } from "astro-icon/components"
+import Photo from "./photo.astro"
 import Socials from "./socials.astro"
-
-const IMG_ALT = "Woodbine Beach, Ontario"
+import Distance from "./distance.astro"
 ---
 
 <div class="row">
@@ -12,48 +11,36 @@ const IMG_ALT = "Woodbine Beach, Ontario"
             Hi, I'm Dj
         </h1>
 
-        <p>
+        <h3>
             I make dreams come true :)
-        </p>
+        </h3>
+
+        <span>
+            <Icon
+                name="heroicons:map-pin-16-solid"
+                title="X, formerly known as Twitter"
+                />
+            <Distance server:defer/>
+        </span>
 
         <Socials/>
     </div>
 
-    <figure>
-        <Image src={DjPicture} loading="eager" title={IMG_ALT} alt={IMG_ALT} />
-
-        <figcaption>{IMG_ALT}</figcaption>
-    </figure>
+    <Photo/>
 </div>
 
 <style>
-    img {
-        object-fit: cover;
-        height: 256px;
-        width: 256px;
-        border-radius: 16px;
-    }
-
     .intro {
         align-content: center;
     }
 
-    figure {
-        flex: 1;
-        flex-direction: column;
+    span {
+        display: flex;
         align-items: center;
     }
 
-    figcaption {
-        padding-top: 1em;
-        text-align: center;
-        width: 256px;
-    }
-
-    @media (min-width: 600px) {
-        figure {
-            margin-right: 0;
-        }
+    [data-icon] {
+        margin-right: 8px;
     }
 
     @media (max-width: 600px) {

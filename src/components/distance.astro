@@ -6,8 +6,12 @@ const shouldUseMiles = Astro.locals.runtime.cf?.country === "US"
 const refMiles = 75;
 const refKilometers = refMiles * 1.60934; 
 
-// Adapted from https://stackoverflow.com/a/48805273/7038817
-function distanceFrom() {
+/**
+ * Adapted from https://stackoverflow.com/a/48805273/7038817
+ * 
+ * @param zero Changes the distance to 0 if the user is closeby, useful if you don't plan on exposing the distance.
+ */
+function calculateDistance(zero = false) {
     const refLatRad = REF_LAT * (Math.PI / 180.0)
     const refLonRad = REF_LON * (Math.PI / 180.0)
     const userLatRad = Number.parseFloat(Astro.locals.runtime.cf?.latitude as string) * (Math.PI / 180.0)
@@ -21,19 +25,36 @@ function distanceFrom() {
 
     if (shouldUseMiles) {
         dist /= 1.60934
-        if(dist <= refKilometers) {
-            dist = 0
-        }
-    } else if (dist <= refMiles) {
+    }
+
+    const threshold = shouldUseMiles ? refKilometers : refMiles;
+    const nearby  = dist <= threshold;
+
+    if (zero && nearby) {
         dist = 0
     }
 
-    return dist.toFixed(2)
+    return {
+        distance: dist.toFixed(2),
+        units: shouldUseMiles ? "mi" : "km",
+        nearby
+    }
 }
+
+const {distance, units, nearby} = calculateDistance();
 ---
 
-<span>
-    ({!Number.parseFloat(distanceFrom()) ? 
-        "Come say hello!" : `We're ${distanceFrom() } ${shouldUseMiles ? "mi" : "km"} apart!`
-    })
-</span>
+<p>
+    We're ~{distance} {units} apart!
+    {nearby && (
+        <Fragment>
+            Come say hi!
+        </Fragment>
+    )}
+</p>
+
+<style>
+    span::after {
+        content: "\0020"
+    }
+</style>

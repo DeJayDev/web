@@ -12,7 +12,7 @@ export default defineConfig({
     icon({
       include: {
         "simple-icons": ["x", "discord"],
-        heroicons: ["envelope-open-20-solid"],
+        heroicons: ["map-pin-16-solid", "envelope-open-20-solid"],
       },
     }),
   ],
