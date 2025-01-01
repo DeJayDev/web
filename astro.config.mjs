@@ -6,7 +6,7 @@ import icon from "astro-icon"
 // https://astro.build/config
 export default defineConfig({
   adapter: cloudflare({
-    imageService: "passthrough",
+    imageService: "passthrough", 
   }),
   integrations: [
     icon({
