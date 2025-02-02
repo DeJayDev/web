@@ -1,10 +1,11 @@
 ---
 const REF_LAT = 29.55937
 const REF_LON = -95.08994
+const ONE_KM = 1.60934 
 
 const shouldUseMiles = Astro.locals.runtime.cf?.country === "US"
-const refMiles = 75;
-const refKilometers = refMiles * 1.60934; 
+const refMiles = 75
+const refKilometers = refMiles * ONE_KM 
 
 /**
  * Adapted from https://stackoverflow.com/a/48805273/7038817
@@ -24,7 +25,7 @@ function calculateDistance(zero = false) {
     let dist = 6371 * c
 
     if (shouldUseMiles) {
-        dist /= 1.60934
+        dist /= ONE_KM
     }
 
     const threshold = shouldUseMiles ? refKilometers : refMiles;
