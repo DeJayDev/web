@@ -2,11 +2,20 @@
 const now = new Date()
 
 const MY_TIMEZONE = "America/Chicago"
-const time = new Intl.DateTimeFormat(undefined, { hour: 'numeric', minute: '2-digit', timeZone: MY_TIMEZONE }).format(now)
+const USER_TIMEZONE = Astro.locals.runtime.cf?.timezone || MY_TIMEZONE
+
+const userHour = Number(
+    new Intl.DateTimeFormat("en-US", {
+        hour: "numeric",
+        hourCycle: "h23",
+        timeZone: USER_TIMEZONE
+    }).format(now)
+)
+const timeOfDay = userHour < 12 ? "morning" : userHour < 17 ? "afternoon" : "evening"
 ---
 
 <span class="localtime">
-    <time class="my-time">{time}</time> for me
+    Good {timeOfDay} — <time class="my-time">{new Intl.DateTimeFormat(undefined, { hour: "numeric", minute: "2-digit", timeZone: MY_TIMEZONE }).format(now)}</time> for me
 </span>
 
 <style>

@@ -1,8 +1,8 @@
 /* Main stylesheet */
 
 @font-face {
-    font-family: 'Sono';
-    src: url('/sono.ttf') format('truetype');
+    font-family: "Sono";
+    src: url("/sono.ttf") format("truetype");
     font-weight: 100 900;
     font-display: swap;
 }
@@ -14,7 +14,7 @@
     font-variation-settings: "MONO" 0;
 }
 
-:root { 
+:root {
     --bg: #0c0a10;
     --bg-card: #14111a;
     --bg-card-hover: #1a1622;
@@ -22,9 +22,9 @@
     --text-muted: #9890a0;
     --accent: #a47fcc;
     --accent-dim: #7a5a9e;
-    
+
     line-height: 1.6;
-    font-family: 'Sono', system-ui, sans-serif;
+    font-family: "Sono", system-ui, sans-serif;
     font-size: 18px;
     color: var(--text);
     background-color: var(--bg);
@@ -43,7 +43,10 @@ body {
 }
 
 /* Typography */
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     margin: 0;
     font-weight: 600;
 }
