@@ -3,49 +3,39 @@ import { Icon } from "astro-icon/components"
 ---
 
 <div class="socials">
-    <a href="https://twitter.com/DeJayDev">
-        <Icon
-            name="simple-icons:x"
-            title="X, formerly known as Twitter"
-            width={32} 
-            height={32}/>
+    <a href="https://twitter.com/DeJayDev" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+        <Icon name="simple-icons:x" width={20} height={20} />
     </a>
-    <a href="mailto:contact@dejaydev.com">
-        <Icon
-            name="heroicons:envelope-open-20-solid"
-            title="Email"
-            width={32}
-            height={32} />
+    <a href="mailto:contact@dejaydev.com" aria-label="Email">
+        <Icon name="heroicons:envelope-20-solid" width={20} height={20} />
     </a>
-    <a href="https://discord.gg/qT7qGq6">
-        <Icon 
-            name="simple-icons:discord"
-            title="Discord Link to 'Dj's Place'"
-            width={32} 
-            height={32}/>
+    <a href="https://discord.gg/qT7qGq6" target="_blank" rel="noopener noreferrer" aria-label="Discord">
+        <Icon name="simple-icons:discord" width={20} height={20} />
     </a>
 </div>
 
 <style>
     .socials {
         display: flex;
-        flex-direction: row;
-        gap: 2em;
-        padding-top: 5%;
+        gap: 0.5rem;
+        margin-top: 1.5rem;
     }
 
-    [data-icon] {
-        color: var(--daark);
-        transition: transform .33s ease-in-out;
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        background: var(--bg-card);
+        color: var(--text-muted);
+        transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
     }
 
-    [data-icon]:hover {
-        transform: translateY(-25%);
-    }
-
-    @media (max-width: 600px) {
-        .socials {
-            justify-content: center;
-        }
+    a:hover {
+        background: var(--bg-card-hover);
+        color: var(--text);
+        transform: translateY(-2px);
     }
 </style>

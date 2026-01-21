@@ -1,6 +1,5 @@
-import { defineConfig } from "astro/config"
-
 import cloudflare from "@astrojs/cloudflare"
+import { defineConfig } from "astro/config"
 import icon from "astro-icon"
 
 // https://astro.build/config
@@ -12,7 +11,7 @@ export default defineConfig({
     icon({
       include: {
         "simple-icons": ["x", "discord"],
-        heroicons: ["map-pin-16-solid", "envelope-open-20-solid"],
+        heroicons: ["envelope-20-solid"],
       },
     }),
   ],
@@ -20,9 +19,11 @@ export default defineConfig({
     port: 3000,
   },
   output: "server",
-  serverIslands: true,
   site: "https://dejay.dev",
   vite: {
+    server: {
+      allowedHosts: "localhost.dejaydev.com",
+    },
     css: {
       transformer: "lightningcss",
     },

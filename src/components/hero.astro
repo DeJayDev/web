@@ -1,0 +1,111 @@
+---
+import { Image } from "astro:assets"
+import DjPicture from "@assets/woodbine.jpg"
+import LocalTime from "./localtime.astro"
+import Distance from "./distance.astro"
+---
+
+<header class="hero">
+    <div class="intro">
+        <h1 class="name"><span class="name-prefix">Hi, I'm</span> Dj</h1>
+        
+        <p class="tagline">I build communities and the software that powers them.</p>
+        
+        <div class="location-info">
+            <LocalTime server:defer/>
+            <span class="separator">·</span>
+            <Distance server:defer/>
+        </div>
+    </div>
+
+    <div class="photo-wrapper">
+        <Image 
+            src={DjPicture} 
+            loading="eager" 
+            alt="Dj at Woodbine Beach" 
+            class="photo"
+        />
+    </div>
+</header>
+
+<style>
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+        width: 100%;
+        max-width: 700px;
+    }
+    
+    .intro {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    .name {
+        font-size: 3.5rem;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        line-height: 1;
+    }
+    
+    .name-prefix {
+        font-weight: 400;
+        color: var(--text-muted);
+    }
+    
+    .tagline {
+        font-size: 1.25rem;
+        color: var(--text-muted);
+    }
+    
+    .location-info {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 1.125rem;
+        color: var(--text);
+        margin-top: 0.5rem;
+        opacity: 0.9;
+        font-weight: 500;
+    }
+    
+    .separator {
+        opacity: 0.5;
+    }
+    
+    .photo {
+        width: 160px;
+        height: 160px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 3px solid var(--bg-card);
+        transition: border-color 0.3s ease;
+    }
+    
+    .photo:hover {
+        border-color: var(--accent-dim);
+    }
+    
+    /* Desktop: two columns */
+    @media (min-width: 640px) {
+        .hero {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            text-align: left;
+        }
+        
+        .intro {
+            flex: 1;
+        }
+        
+        .photo {
+            width: 180px;
+            height: 180px;
+        }
+    }
+</style>

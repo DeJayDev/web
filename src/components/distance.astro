@@ -18,7 +18,6 @@ function calculateDistance(zero = false) {
     const userLatRad = Number.parseFloat(Astro.locals.runtime.cf?.latitude as string) * (Math.PI / 180.0)
     const userLonRad = Number.parseFloat(Astro.locals.runtime.cf?.longitude as string) * (Math.PI / 180.0)
 
-    // This is the Haversine Formula: https://en.wikipedia.org/wiki/Haversine_formula
     const a = Math.sin((refLatRad - userLatRad) / 2) ** 2 + Math.sin((refLonRad - userLonRad) / 2) ** 2 * Math.cos(refLatRad) * Math.cos(userLatRad)
     const c = 2 * Math.asin(Math.sqrt(a))
 
@@ -28,15 +27,15 @@ function calculateDistance(zero = false) {
         dist /= ONE_KM
     }
 
-    const threshold = shouldUseMiles ? refKilometers : refMiles;
-    const nearby  = dist <= threshold;
+    const threshold = shouldUseMiles ? refMiles : refKilometers;
+    const nearby = dist <= threshold;
 
     if (zero && nearby) {
         dist = 0
     }
 
     return {
-        distance: dist.toFixed(2),
+        distance: dist.toFixed(0),
         units: shouldUseMiles ? "mi" : "km",
         nearby
     }
@@ -45,17 +44,12 @@ function calculateDistance(zero = false) {
 const {distance, units, nearby} = calculateDistance();
 ---
 
-<p>
-    We're ~{distance} {units} apart!
-    {nearby && (
-        <Fragment>
-            Come say hi!
-        </Fragment>
-    )}
-</p>
+<span class="distance">
+    ~{distance} {units} apart{nearby && " — come say hi"}
+</span>
 
 <style>
-    span::after {
-        content: "\0020"
+    .distance {
+        white-space: nowrap;
     }
 </style>

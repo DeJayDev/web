@@ -1,0 +1,79 @@
+/* Main stylesheet */
+
+@font-face {
+    font-family: 'Sono';
+    src: url('/sono.ttf') format('truetype');
+    font-weight: 100 900;
+    font-display: swap;
+}
+
+/* Reset & Base */
+* {
+    box-sizing: border-box;
+    font-feature-settings: "ss01" on;
+    font-variation-settings: "MONO" 0;
+}
+
+:root { 
+    --bg: #0c0a10;
+    --bg-card: #14111a;
+    --bg-card-hover: #1a1622;
+    --text: #f0eef2;
+    --text-muted: #9890a0;
+    --accent: #a47fcc;
+    --accent-dim: #7a5a9e;
+    
+    line-height: 1.6;
+    font-family: 'Sono', system-ui, sans-serif;
+    font-size: 18px;
+    color: var(--text);
+    background-color: var(--bg);
+}
+
+body {
+    background-color: var(--bg);
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+    margin: 0;
+    font-weight: 600;
+}
+
+h1 {
+    line-height: 1;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--text);
+}
+
+a:focus-visible {
+    outline: 3px solid var(--accent-dim);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+/* Media */
+img {
+    max-width: 100%;
+    height: auto;
+}

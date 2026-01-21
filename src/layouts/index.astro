@@ -5,31 +5,29 @@ interface Props {
 
 const { title } = Astro.props
 
-import "@style/neat/neat.css"
-import "@style/custom.css"
+import "@style/main.css"
 
-export const description = "Software Engineer - I help make dreams come true."
+export const description = "Community Engineer & Software Developer"
 ---
 
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <title>{title}</title>
         <meta name="title" content={title} />
         <meta name="description" content={description} />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="preload" href="/sono.ttf" as="font" type="font/ttf" crossorigin />
         <link rel="canonical" href={Astro.url} />
 
         <meta property="og:type" content="website" />
         <meta property="og:url" content={Astro.url} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
-        <meta property="og:image" content={`${Astro.url}/assets/logo.png`} />
-        <!-- Other Favicons -->
+        <meta property="og:image" content={`${Astro.url.origin}/logo.jpg`} />
 
-        <!-- Stuff that asked to be in the head -->
         <link href="https://crunchy.social/@dejay" rel="me" />
         <meta name="darkreader-lock" />
         <meta name="generator" content={Astro.generator} />
