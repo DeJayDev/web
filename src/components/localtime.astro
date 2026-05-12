@@ -1,8 +1,8 @@
 ---
 const now = new Date()
 
-const MY_TIMEZONE = "America/Chicago"
-const USER_TIMEZONE = Astro.locals.runtime.cf?.timezone || MY_TIMEZONE
+const MY_TIMEZONE = "America/Los_Angeles"
+const USER_TIMEZONE = (Astro.request.cf?.timezone as string) || MY_TIMEZONE
 
 const userHour = Number(
     new Intl.DateTimeFormat("en-US", {

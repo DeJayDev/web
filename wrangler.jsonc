@@ -1,8 +1,8 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
-  "main": "dist/_worker.js/index.js",
+  "main": "@astrojs/cloudflare/entrypoints/server",
   "name": "web",
-  "compatibility_date": "2026-01-20",
+  "compatibility_date": "2026-05-01",
   "compatibility_flags": [
     "nodejs_compat",
     "global_fetch_strictly_public"

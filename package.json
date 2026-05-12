@@ -3,23 +3,22 @@
   "type": "module",
   "version": "1.0.0",
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev --host",
-    "build": "astro check && astro build",
+    "dev": "wrangler types && astro dev",
+    "start": "wrangler types && astro dev --host",
+    "build": "wrangler types && astro check && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.6",
-    "@astrojs/cloudflare": "^12.6.12",
-    "astro": "^5.16.11",
-    "astro-icon": "^1.1.5",
-    "lightningcss": "^1.31.0",
-    "typescript": "^5.9.3"
+    "@astrojs/check": "^0.9.9",
+    "@astrojs/cloudflare": "^13.5.0",
+    "astro": "^6.3.1",
+    "iconify-icon": "^3.0.2",
+    "lightningcss": "^1.32.0",
+    "typescript": "^6.0.3"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.3.11",
-    "@iconify-json/heroicons": "^1.2.3",
-    "@iconify-json/simple-icons": "^1.2.67"
+    "@biomejs/biome": "^2.4.15",
+    "@types/node": "^25.7.0"
   }
 }
