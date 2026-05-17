@@ -1,6 +1,6 @@
 ---
-const REF_LAT = 41.8828
-const REF_LON = -87.62305
+const REF_LAT = 37.77919
+const REF_LON = -122.41578
 const ONE_KM = 1.60934
 
 const shouldUseMiles = Astro.request.cf?.country === "US"
@@ -44,12 +44,12 @@ function calculateDistance(zero = false) {
 const { distance, units, nearby } = calculateDistance()
 ---
 
-<span class="distance">
-    ~{distance} {units} apart{nearby && " — come say hi"}
-</span>
+<span class="distance">~{distance} {units} apart</span>
+{nearby && <span class="distance-cta">come say hi</span>}
 
 <style>
-    .distance {
+    .distance,
+    .distance-cta {
         white-space: nowrap;
     }
 </style>

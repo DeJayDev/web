@@ -64,45 +64,68 @@ import Distance from "./distance.astro"
     
     .location-info {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         align-items: center;
-        gap: 0.5rem;
+        gap: 0.25rem 0.5rem;
         font-size: 1.125rem;
         color: var(--text);
         margin-top: 0.5rem;
         opacity: 0.9;
         font-weight: 500;
     }
+
+    .location-info :global(.distance-cta) {
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    @media (max-width: 767px) {
+        .location-info {
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .location-info .separator {
+            display: none;
+        }
+    }
     
     .separator {
         opacity: 0.5;
     }
     
+    .photo-wrapper {
+        flex-shrink: 0;
+    }
+
     .photo {
         width: 160px;
         height: 160px;
         object-fit: cover;
         border-radius: 50%;
-        border: 3px solid var(--bg-card);
-        transition: border-color 0.3s ease;
+        box-shadow: 0 0 0 1px var(--bg-card-hover), 0 8px 24px rgba(0, 0, 0, 0.4);
+        transition: box-shadow 0.3s ease;
     }
-    
+
     .photo:hover {
-        border-color: var(--accent-dim);
+        box-shadow: 0 0 0 2px var(--accent-dim), 0 8px 24px rgba(0, 0, 0, 0.4);
     }
     
     /* Desktop: two columns */
-    @media (min-width: 640px) {
+    @media (min-width: 768px) {
         .hero {
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
             text-align: left;
         }
-        
+
         .intro {
             flex: 1;
+            min-width: 0;
         }
-        
+
         .photo {
             width: 180px;
             height: 180px;

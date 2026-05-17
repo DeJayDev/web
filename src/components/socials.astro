@@ -40,4 +40,12 @@ import IconDiscord from "~icons/simple-icons/discord"
         color: var(--text);
         transform: translateY(-2px);
     }
+
+    @media (prefers-reduced-motion: reduce) {
+        a,
+        a:hover {
+            transition: none;
+            transform: none;
+        }
+    }
 </style>
