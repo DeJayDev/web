@@ -1,5 +1,6 @@
 import cloudflare from "@astrojs/cloudflare"
 import { defineConfig } from "astro/config"
+import Icons from "unplugin-icons/vite"
 
 // https://astro.build/config
 export default defineConfig({
@@ -18,5 +19,6 @@ export default defineConfig({
     css: {
       transformer: "lightningcss",
     },
+    plugins: [Icons({ compiler: "astro" })],
   },
 })
